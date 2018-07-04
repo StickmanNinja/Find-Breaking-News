@@ -32,10 +32,9 @@ overflow-x: hidden;}
 	background: linear-gradient(90deg, #EB5767, lightcoral);
 }
 .button:hover, button:hover{
-	-webkit-box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.75);
-	box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.75);
 	transition-duration: .2s;
+	text-decoration: none;
+	text-decoration: underline;
 }
 
 .red {
@@ -233,28 +232,29 @@ li a {
 li a:hover {
     text-decoration: none;
 	text-decoration: underline;
-	transition-duration: .2s;
-	color: #fff !important; 
+	transition-duration: .2s; 
 }
 
 #brand {
 	position: absolute;
 	display: block;
-	color: dodgerblue;
+	color: #82C23D;
 	font-family: 'Pacifico', cursive;
 	font-size: 30px;
 	width: auto;
 	padding-bottom: 10px;
 	margin-top: 15px;
-	margin-left: 10px;
+	margin-left: 30px;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color:linear-gradient(90deg, dodgerblue, #55C1E8); 
 }
 
 #bluelink {
-	background: -webkit-linear-gradient(dodgerblue, #55C1E8);
+	color: #55C1E8;
+	background-color: white;
 }
 
 #redlink {
-	background: linear-gradient(90deg, #EB5767, lightcoral); 
+	color: #82C23D;
+	background-color: white;
 }
