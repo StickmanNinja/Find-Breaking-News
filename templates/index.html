@@ -1,84 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!–– New Title -->
-	<link href="{{ url_for('static',filename='styles/roundfont.css') }}" rel="stylesheet">
-	<!–– Button Text -->
-	<link href="{{ url_for('static',filename='styles/sansprofont.css') }}" rel="stylesheet">
-	<!–– descripion -->
-	<link href="{{ url_for('static',filename='styles/ptmono.css') }}" rel="stylesheet">
-	<title>Home</title>
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/styles.css') }}">
-	
-	<link href="{{ url_for('static',filename='styles/opensans.css') }}">
-	
-	
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="{{ url_for('static',filename='styles/bootstrap.min.css') }}">
-
-	<!-- jQuery library -->
-	<script src="{{ url_for('static',filename='styles/jquery.min.js') }}"></script>
-
-	<!-- Latest compiled JavaScript -->
-	<script src="{{ url_for('static',filename='styles/bootstrap.min.js') }}"></script>
+<title>Title of the document</title>
 </head>
 
 <body>
-	<h4 id = "brand"><strong>News Find ™</strong></h4>
-	<ul>
-		<li><a href="signup.html" id = "redlink">Sign Up</a></li>
-		<li><a href="login.html" id = "bluelink">Login</a></li>
-	</ul>
-    <header class="jumbotron">
-		<p id = "title" class = "white"><strong>Want Breaking Political News?</strong></p>
-		<p id = "subtitle" class="white"> Save countless hours by using our autmated news finding platform. </p>
-		<br>
-		<button class = "button">Sign Up Today</button>
-    </header>
-	
-	<div class="col-xs-12 firstrow">
-		<div class="row">
-			<div class="col-xs-4 col-md-4">
-	  		</div>
-	  		<div class="col-xs-4 col-md-4">
-	  			<img src="{{ url_for('static',filename='images/chart.png') }}" class="img-responsive center-block icon" alt="Logo">
-	  		</div>
-	  		<div class="col-xs-4 col-md-4">
-			</div>
-		</div>
-		<div class = "row"><h3>Using specially designed algorithms, our service automatcially looks for content that readers love.</h3></div>
-	</div>
-
-	<div class="col-xs-12 secondrow">
-		<div class="row">
-			<div class="col-xs-4 col-md-4">
-	  		</div>
-	  		<div class="col-xs-4 col-md-4">
-	  			<img src="{{ url_for('static',filename='images/code.png') }}" class="img-responsive center-block icon" alt="Logo">
-	  		</div>
-	  		<div class="col-xs-4 col-md-4">
-			</div>
-		</div>
-		<div class = "row"><h3>Bring data into your system by using our custom web APIs, or use our pre-built data connectors for apps like Trello and Facebook.</h3></div>
-		<br>
-	</div>
-	
-	<div class="col-xs-12 thirdrow">
-		<div class="row">
-			<div class="col-xs-4 col-md-4">
-	  		</div>
-	  		<div class="col-xs-4 col-md-4">
-	  			<img src="{{ url_for('static',filename='images/users.png') }}" class="img-responsive center-block icon" alt="Logo">
-	  		</div>
-	  		<div class="col-xs-4 col-md-4">
-			</div>
-		</div>
-		<div class = "row"><h3>Connect your Facebook or Trello accounts for easy deliverability.</h3></div>
-		<br>
-	</div>
-
-	
+    <h1>Welcome!</h1>
+    <a href = "{{ url_for('signup') }}">Sign Up</a>
 </body>
 
 </html>
-
