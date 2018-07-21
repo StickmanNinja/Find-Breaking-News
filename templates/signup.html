@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sign Up</title>
+</head>
+
+<body>
+<form actions = "{{ url_for('signup') }}" enctype="multipart/form-data" method="post">
+  <input type="text" name="username" placeholder="username"><br>
+  <input type="password" name="password" placeholder="password"><br>
+  <input type="password" name="confirmpassword" placeholder="confirm password"><br>
+  <input type="submit" value="Submit" name="submit">
+</form>
+</body>
+
+</html>

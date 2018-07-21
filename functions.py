@@ -6,9 +6,9 @@ import pymysql.cursors, os
 password = os.environ['BreakingNewsPassword']
 username = os.environ['BreakingNewsUsername']
 dbname = os.environ['BreakingNewsDB']
-host = os.environ['SitegroundHostingIP']
+hostname = os.environ['SitegroundHostingIP']
 
-conn = pymysql.connect(host=host,
+conn = pymysql.connect(host=hostname,
                              user=username,
                              password=password,
                              db=dbname,
@@ -26,8 +26,8 @@ def initTable():
 def createUser(username, password):
     global conn
     cursor = conn.cursor()
-    query = "INSERT INTO `users` (`username`,`password`) VALUES (%s)"
-    cursor.execute(query, [str(username), str(password)])
+    query = "INSERT INTO `users` (`username`,`password`) VALUES (%s, %s)"
+    cursor.execute(query, [username, password])
 
 # This function checks to see if username is available. If so, it returns True.
 def checkUser(username):
@@ -41,8 +41,8 @@ def checkUser(username):
     else:
         return False;
 
-# This function returns true if the password meets set guidlines.
-def checkPassword(password):
+# This function returns true if the string meets set guidlines for username and password.
+def checkString(password):
     alphabet = "abcdefghijklmnopqrstuvwxyz"
     alphabet = alphabet.split()
     for i in range(0,9):
