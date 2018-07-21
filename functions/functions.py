@@ -40,3 +40,18 @@ def checkUser(username):
        return True
     else:
         return False;
+
+# This function returns true if the password meets set guidlines.
+def checkPassword(password):
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    alphabet = alphabet.split()
+    for i in range(0,9):
+        alphabet.append(i)
+    if len(password) > 20:
+        return False
+    for i in password:
+        if isinstance(i, (int, long)) == False:
+            if i.lower() not in alphabet == True:
+                return False
+    return True
+

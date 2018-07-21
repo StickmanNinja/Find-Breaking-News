@@ -16,4 +16,4 @@ def login():
     return "Time to login!"
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
