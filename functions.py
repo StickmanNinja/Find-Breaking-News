@@ -55,3 +55,14 @@ def checkString(password):
                 return False
     return True
 
+# This function looks for the username and password combo in database.
+def lookupUser(username, password):
+    global conn
+    cursor = conn.cursor()
+    query = "SELECT password FROM `users` WHERE username = '" + str(username) + "'"
+    cursor.execute(query)
+    for row in cursor:
+        if row["password"] == password:
+            return True
+        else:
+            return False

@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Sign Up</title>
+<title>Login</title>
 </head>
 
 <body>
-<form actions = "{{ url_for('signup') }}" enctype="multipart/form-data" method="post">
+<form actions = "{{ url_for('login') }}" enctype="multipart/form-data" method="post">
   <input type="text" name="username" placeholder="username"><br>
   <input type="password" name="password" placeholder="password"><br>
-  <input type="password" name="confirmpassword" placeholder="confirm password"><br>
   <input type="submit" value="Submit" name="submit"><br>
-  <a href = "{ url_for('login') }"> Already have an account?</a>
+  <a href = "{ url_for('signup') }"> Don't have an account?</a>
 </form>
 </body>
 

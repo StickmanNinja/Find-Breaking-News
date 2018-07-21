@@ -13,11 +13,18 @@ def consolelog(x):
 # Randomly generated key using os.urandom(24), saved to an environment variable.
 app.secret_key = os.environ['BreakingNewsSecret']
 app.config['TRAP_BAD_REQUEST_ERRORS'] = True
-@app.route('/login')
+
+@app.route('/login', methods = ["GET","POST"])
 def login():
-    session["user"] = "SethConnell"
-    session["password"] = "sethconnell777"
-    return "<h1>You are logged in!</h1>"
+    if request.method == 'POST':
+        given_username = request.form["username"]
+        given_password = request.form["password"]
+        if lookupUser(given_username, given_password) == True:
+            session["user"] = given_username
+            return redirect(url_for('success'))
+    else:
+        return render_template("login.html")
+        
 
 @app.route("/logintest")    
 def login_test():
@@ -51,6 +58,7 @@ def signup():
             consolelog(given_username)
             consolelog(given_password)
             createUser(given_username, given_password)
+            session["user"] = given_username
             return redirect(url_for('success'))
     else:
         return render_template("signup.html")
