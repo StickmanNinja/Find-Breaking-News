@@ -25,19 +25,27 @@ def login():
     else:
         return render_template("login.html")
         
-
-@app.route("/logintest")    
-def login_test():
-    if session["user"] == "SethConnell" and session["password"] == "sethconnell777":
-        return "you did it!"
-    else:
-        return "error: You are not logged in!"
     
 @app.route("/logout")
 def logout():
     session.clear()
     if session.get("user") is None:
         return "<h1>You did it, boy!!</h1>"
+
+@app.route("/JSON")
+def JSON():
+    return "JSON Example."
+
+@app.route("/trello")
+def trello():
+    if lookupToken(session["user"]) == True:
+        return "You don't have anything to worry about! You did it!"
+    else:
+        return "You're screwed!"
+
+@app.route("/email")
+def email():
+    return "Email Example."
 
 @app.route('/')
 @app.route('/home')

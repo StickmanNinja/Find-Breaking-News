@@ -19,7 +19,7 @@ conn = pymysql.connect(host=hostname,
 def initTable():
     global conn
     cursor = conn.cursor()
-    query = "CREATE TABLE IF NOT EXISTS `users`( `datanumber` int NOT NULL AUTO_INCREMENT, `username` text NOT NULL, `password` text NOT NULL, PRIMARY KEY (datanumber)) ENGINE=MEMORY;"
+    query = "CREATE TABLE IF NOT EXISTS `users`( `datanumber` int NOT NULL AUTO_INCREMENT, `username` text NOT NULL, `password` text NOT NULL, `trellotoken` text NULL, PRIMARY KEY (datanumber)) ENGINE=MEMORY;"
     cursor.execute(query)
 
 # This function adds users to database.
@@ -67,6 +67,17 @@ def lookupUser(username, password):
         else:
             return False
 
+def lookupToken(username):
+    global conn
+    cursor = conn.cursor()
+    query = "SELECT trellotoken FROM `users` WHERE username = '" + str(username) + "'"
+    cursor.execute(query)
+    for row in cursor:
+        if row["trellotoken"] != None:
+            return True
+        else:
+            return False
+
 
 # This function sets up the table required for storing news stories.
 def setupStoryTable():
@@ -74,3 +85,6 @@ def setupStoryTable():
     cursor = conn.cursor()
     query = "CREATE TABLE IF NOT EXISTS `stories`( `datanumber` int NOT NULL AUTO_INCREMENT, `source` text NOT NULL, `headline` text NOT NULL, `url` text NOT NULL, PRIMARY KEY (datanumber)) ENGINE=MEMORY;"
     cursor.execute(query)
+
+# This should always run to ensure the users table exists in the database.
+initTable()

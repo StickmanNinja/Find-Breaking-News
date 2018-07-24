@@ -9,8 +9,13 @@
     <p>We hope you enjoy your visit!</p>
     <br>
     <br>
-    <h2>Trello</h2>
-    <a href="https://trello.com/1/authorize?expiration=never&name=MyPersonalToken&scope=read&response_type=token&key=79bad24bd4fed75755bf34a4a3b77232">Grant Us Access</a>
+    <a href = "{{ url_for('JSON') }}"><h2>JSON</h2></a>
+    <br>
+    <br>
+    <a href = "{{ url_for('trello') }}"><h2>Trello</h2></a>
+    <br>
+    <br>
+    <a href = "{{ url_for('email') }}"><h2>Email</h2></a>
 </body>
 
 </html>
