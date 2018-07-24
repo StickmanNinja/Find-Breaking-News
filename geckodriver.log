@@ -1,0 +1,528 @@
+1529367475408	geckodriver	INFO	geckodriver 0.20.0
+1529367475422	geckodriver	INFO	Listening on 127.0.0.1:56775
+1529367476425	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-profile" "/var/folders/24/43sdwrg509z6q0cc7dx_v4j00000gn/T/rust_mozprofile.V4NaNRWXoVcv"
+*** You are running in headless mode.
+1529367477502	Marionette	INFO	Enabled via --marionette
+2018-06-18 19:17:58.804 plugin-container[12606:590798] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x873f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1529367479440	Marionette	INFO	Listening on port 56786
+1529367479588	Marionette	WARN	TLS certificate errors will be ignored for this session
+2018-06-18 19:17:59.970 plugin-container[12607:590878] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x853f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1529367498347	geckodriver::marionette	ERROR	Failed to stop browser process
+1529367635518	geckodriver	INFO	geckodriver 0.20.0
+1529367635526	geckodriver	INFO	Listening on 127.0.0.1:57675
+1529367636540	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-profile" "/var/folders/24/43sdwrg509z6q0cc7dx_v4j00000gn/T/rust_mozprofile.HsB1Bl2JTflT"
+*** You are running in headless mode.
+1529367637190	Marionette	INFO	Enabled via --marionette
+2018-06-18 19:20:38.250 plugin-container[12613:592222] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x843f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1529367638762	Marionette	INFO	Listening on port 57686
+1529367638812	Marionette	WARN	TLS certificate errors will be ignored for this session
+2018-06-18 19:20:39.228 plugin-container[12614:592291] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x773f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1529367670350	geckodriver::marionette	ERROR	Failed to stop browser process
+1529367781522	geckodriver	INFO	geckodriver 0.20.0
+1529367781529	geckodriver	INFO	Listening on 127.0.0.1:58558
+1529367782536	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-profile" "/var/folders/24/43sdwrg509z6q0cc7dx_v4j00000gn/T/rust_mozprofile.KNBFOdB619dB"
+*** You are running in headless mode.
+1529367783348	Marionette	INFO	Enabled via --marionette
+2018-06-18 19:23:04.480 plugin-container[12622:593558] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x793f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1529367784996	Marionette	INFO	Listening on port 58569
+1529367785046	Marionette	WARN	TLS certificate errors will be ignored for this session
+2018-06-18 19:23:05.498 plugin-container[12623:593640] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x783f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+JavaScript error: https://googleads.g.doubleclick.net/dbm/ad?dbm_c=AKAmf-C-eII6MV4L_ZVHX3f-b6ABARY9KT7aKtJytZwicQwTcJlkKtyrGRli-tM1rdzVCuwhxCBm&dbm_d=AKAmf-D7dD5-yHba5wPsNg0z5mWVnOUW4trpZJRXncNfdG9_uFwcKp9cYTGjVdbnVt2GZXFmkNmHuT9kFpeK--ypgYL9czQaQutyedXRSjQN6Qs60bx5AN4oi_H4c0i-2H1YRQvjp9t2_2HEYzr4RwOLatVgj5WXI2QoNpBHXUeZBjP2A9Asbf7Q6Ivn4E0v62Me04StEDqVuxRoXtch5jfnxE8W6KeVGgA3mVSgaSi4UfI5HRebreylVt8EGura8D2cfCnoXZpJUFJkO8JO1Cj-xDQBUL2NptmyJzVTgkc3slhs0cTrlOmiioJSX2Y8hpRaufFa3jxqVBsAbW-mHG2l18eVzyblLxGYg8YtTA_Ps2KoPGwxwYLqA7pOnq_ZpMED79MUucXH5fkMNAHtjG6cu97H-M7Pp_h1dO_vtPgEJgBhkkjqZ573C-pIT6MYQsUYKje0DxEE1qEzjgpFXxFfR2H2QBOMTIdhFRzhPmf_T_0peKoWQ4A0BYABnp8W_vf5nm5k5TOqpReXrNwd5l533QN5sQuSjaUM4tMrrPWVjMw84D9xvHCgyN5a81TPxXmMpSAz1ZboJvPsWgxlKKg3dAm6RLMSQVZTcch7i1FGmYputw29pcWrEDRgtifDNmniEZNnHk70IUzV-taBm27KiP1wIZhzvHVoKyYwBmDKiqPri_PCEkW-Nudlt-ixWYWp7mhe5kld1JTdUg89bz1zN38RHCyevJu2kbCJ1B6J7UZJLuhpfmE0L0NaMfgcosfYO0i8tptOOVY1khY6jc4da4fgojdYL053IFTXaJh8sEfXVBgVfN1iuhFzAm3855_1nEWqk5dTU27AUgIwuS3DC8yTcBg-94qRORQCPvf1yCI4UpmLrXG_J_Rx4cI6lv2Ko_b2oGaWaHLatliBjzVZ28nHZV0r0sJAYF8i-zTTKgsH1P3RUzWYP-u_HXmgXyzKByScBL_rk5a8rj4LEmJy3TzxwtDnSDblK9ca3LvVUTP66UkyQZ9WBeC60LDpyrOQNXOlwLxno0Mtt98YvDtajjrSEmINLuEobbAYmMNnTq3-5AltjuxRbEeKA-CqJS6xKH7Cd8xk5wm21q3NogkVmhLmM92Zf-79gHzZKjVEfwapCtkVtq_ZmAep82Ir6TpC0xyeK1OdWozeNgm45_mSFaQ8Segxk5_ORZU0MvFJZN_q2tkbpN98-2aHea8zStM2DduE-5enIQK7mWJRtWmhjO29NOJgwIzwNUk8HPXCFcWMZWmG6N40WGoFwTT54Q5_qQm4UTg5z79nxL0HHproYxXrFvLa74cvM-tr226osTmlQce7uWcvc81wFpC85Nckrl8RwTjPBnhYTi6XV2sV3ZKYsGSiPSi56bEd4CiEryM7iLFx0YkCzmX_pxZJWfteqrDd34IkI-KNEDT8_LcOpOA8K_5TYL-C8YVAvzazoK3ZI7dYx-ugVHv1eR7KcP79Mg_3rfk5PfWaPB4vcoexWcUXL-juuDBAcDdI9Beszwqk-ptit-Na4J7hDAGvdezRiE-G7ZcNkvQGetDdyO6e-0_OfjdzaRqIQHivFhUuId_RL3-lWt89yNz4QuswyAJ88sZ65OSC6XT2oRJFFgkERrWxrrnQi8x3Nz5OPDIdw1Gf9QBXrBagGII8NwB5Q_zZ-cGdqMh_JNGdpLmVHcXH6pexJpz71yZ1QtgYyFdAyTXnqK0peUYd0R7UCKhKUlXZetub0S5mmzQQC8jdjgO69NgdORysFwmrpVuEwWSqm4rCT7pmd5QteJYZl1KsxHaXigogArkRGXyhEokSndtE0TGirGl_l_pOfTv8GUQ4anQbw9xmvTU2LxSiYTCOjLphttIjfCczLyZkubmyiULMTcbvJntaV-tcfFgx_QMGPHmBUNNA8ujD8l58YzmkDJnLiX19VJrybk983LRCerMHGemaFTYrLbWW507jB31EtJCLuH1pv3CPTmrVByUW-r2FRrjO6N3_EZtvjeTaame4Ya7hq6WgCc8XX0iszEZ87mIFOguENP94q94ufuMaDin_C3oCaM2BlNj5QM3Tgf-BhXJ5UC46wVaKwRvXFe1eJFOIY1N7qiI33IVUpFcFD9diJRIuCmGkuHlSCzBPc0x9_hKI6I5UN69ynFbcKD8I_oUDQOjDtCWsWwZrNvGe8PDB_pbMOu0RUZ1eyxLFm3TxEXhx9znM7zy1ZdtlPiulj2y3QHAfvkO6St4naJ2PRcTaCVJVfLtKFCayzLJvjPLIzJrTvq00LnkmlAB5YejWogVe4WbPdNFsRtnQbOFwSovVefqA3WM7XvXcm1OAIrSnhW7z8Uk4rw&cid=CAASEuRoWDnXtNtPSYXJL9-H158hDQ&rfl=1%2Chttp%253A%252F%252Finsider.foxnews.com%252F%240, line 3: ReferenceError: require is not defined
+1529367820074	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1529367820480	geckodriver::marionette	ERROR	Failed to stop browser process
+1529367967083	geckodriver	INFO	geckodriver 0.20.0
+1529367967091	geckodriver	INFO	Listening on 127.0.0.1:59638
+1529367968106	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-profile" "/var/folders/24/43sdwrg509z6q0cc7dx_v4j00000gn/T/rust_mozprofile.hHB4AcUbwjiL"
+*** You are running in headless mode.
+1529367968848	Marionette	INFO	Enabled via --marionette
+2018-06-18 19:26:09.902 plugin-container[12632:595270] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x7f03, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1529367970288	Marionette	INFO	Listening on port 59649
+1529367970376	Marionette	WARN	TLS certificate errors will be ignored for this session
+2018-06-18 19:26:10.880 plugin-container[12633:595348] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x823f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1529367999728	geckodriver::marionette	ERROR	Failed to stop browser process
+1529368025538	geckodriver	INFO	geckodriver 0.20.0
+1529368025550	geckodriver	INFO	Listening on 127.0.0.1:60236
+1529368026552	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-profile" "/var/folders/24/43sdwrg509z6q0cc7dx_v4j00000gn/T/rust_mozprofile.02cbqccpnD2c"
+*** You are running in headless mode.
+1529368027300	Marionette	INFO	Enabled via --marionette
+2018-06-18 19:27:08.312 plugin-container[12641:596032] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x7b03, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1529368028730	Marionette	INFO	Listening on port 60247
+1529368028848	Marionette	WARN	TLS certificate errors will be ignored for this session
+2018-06-18 19:27:09.265 plugin-container[12642:596104] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x713f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1529368058175	geckodriver::marionette	ERROR	Failed to stop browser process
+1529368084858	geckodriver	INFO	geckodriver 0.20.0
+1529368084865	geckodriver	INFO	Listening on 127.0.0.1:60794
+1529368085886	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-profile" "/var/folders/24/43sdwrg509z6q0cc7dx_v4j00000gn/T/rust_mozprofile.YT112RART9rj"
+*** You are running in headless mode.
+1529368086540	Marionette	INFO	Enabled via --marionette
+2018-06-18 19:28:07.549 plugin-container[12653:596898] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x873f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1529368087964	Marionette	INFO	Listening on port 60801
+1529368088078	Marionette	WARN	TLS certificate errors will be ignored for this session
+2018-06-18 19:28:08.485 plugin-container[12654:596979] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x7c03, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+JavaScript error: http://tpc.googlesyndication.com/sodar/6uQTKQJz.html, line 29: NS_ERROR_NOT_INITIALIZED: 
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1529368124950	geckodriver::marionette	ERROR	Failed to stop browser process
+1529368255494	geckodriver	INFO	geckodriver 0.20.0
+1529368255502	geckodriver	INFO	Listening on 127.0.0.1:61804
+1529368256518	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-profile" "/var/folders/24/43sdwrg509z6q0cc7dx_v4j00000gn/T/rust_mozprofile.PvIdR59wZ9sH"
+*** You are running in headless mode.
+1529368257146	Marionette	INFO	Enabled via --marionette
+2018-06-18 19:30:58.145 plugin-container[12669:598527] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x7f3f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1529368258580	Marionette	INFO	Listening on port 61815
+1529368258594	Marionette	WARN	TLS certificate errors will be ignored for this session
+2018-06-18 19:30:59.148 plugin-container[12670:598602] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x7b03, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+JavaScript error: https://googleads.g.doubleclick.net/dbm/ad?dbm_c=AKAmf-BFxPZBiWd3LfDr6GH2FEtS12gDrMl2Bgim3tyVuS8s5h7kVGLV59Kli0juMIsoG7QLfLEq&dbm_d=AKAmf-Aw0b0UA6rkYcACltqR64W8QP_gao0q_IjNiWaejyRj6-eLjhWPd4ucPSa0R5KWoqSQbMRyv6fscTkJxwJF_NCPXlGGnlnPuS4wk9-OWC1QNhaViTaGt9kE7Xh86viyd7CArSUHxg8VHquLqaX2NiXXLfeyTJ8fSuTMph2i5-EW8IboOGhkLOVh-pLI2kX7t-eDtju2VzJS1Gr6auiCk0iv2toX4oAimBLcErjSmGNyyT7PBGbc_kNrc5rqTbbdmHo59QR-DFGQtyDGeBavk7B7BSYN5beV4woom7KP1ep_KURfSbjFZGISosEnXnKlXfMYxv0XlA_KzOhNlpVFJk4guXHmi60Uvxq_FirIwwUD9sO9q5DyP4Rd9cBbxYhqZ5ZEL01t0cF_M2CFiFJIFl6gTv8jmfnWhhzqb6Y7uEKbeqsi5JNu0e6NBfed8NxKnDp81fkBwD_PoYyrCE4rxOM1CXvfp6G0oPrmJDVeU3hXRj61r1jfjgbkhnxiYUPgRG-bRI6DWbJJd8Xd52srwGTxYctDfmNjyYvYoefvh2y0m7A0kTfDL-dDFfNF2kci2SuXaIc-QmVZ6wScIaaVfENEEh_sOK1pQWqNgCDtn2GqEsTvnYb7DpaZNZ4w80kJZs6Kh0LpJYLG7DgMbVFk4n2NAJiBhpAfjyDZpcajy--dvj0gfILWcXJxBRFA4GKvzJP77TkrYhrxGsZ2xur-_vhZm_--xZORWX8_ThxUymljuTtXOkVHCKAte9ZoyntIwXiusFiugiqptn9Rv-bA_t9_fdz44uCAarlazJT5t5mFR9WOPepYIr2Nqfi_6wTEgrws1YuGYQL0-iDw_YEZ4uOXAwkl6iw-qpybBVXEibZfJItzmAieKpuLhmIAX9rjlekUqG7thvi2Ug-QjrKVUvuhWOzXk3NhIwbdrpuCBbpOsL9cOmXdSSdkbI_Emy5uIdwtfF_3j3zDa3YqSJunqLICyAOud1OX5t5Jtovc89hMkNS8PDtWqh-jYmZ7xOaGakPGWxEdV9oWoiJorfHyXSnF7-3wR259Llh2CT2PRK6aYa4IQWgGsNXGWmXmfz0TvHM_bqCnpgQ2BF8Q8DaFWuC2T2WuH09D13Pl7seSA5el_O8o4hOa0ZyGTV5qykFA1iDBDKajdcYGQdvwY6EZ6sEjUoAZrAo5FhFKAq3sknOzaKZSg8nqFKzjP-6sd-8gy2INc2bz5wyBBsYj-86rcVBcxSW-2w0fq0bdwQXbVDvzLaqRZqInpW12jA6j8H9rH1cKnd8pQqSxl6x6HZGs68zRMpWXEr_wI-bI98oPTcQz6CGVOIgkETXtOZS_3wvfLC_tx7Jncuw6N6uFg_mOnqr5cnUjNWUTsdejECE-sIvvtDXJ_IaLT2LYqYu05X1OFHrZmb7-4dnI8mNHYF8hr2HZfcHFCwgRxMV97RvQzIhhUfP5qLnIzd5NSgoSQDBQShc3nhmIIGUGVLJSdiBZt4v1lgLFlCAR1AEqSacICaOl3hVIU5SYUY1hQENUle12Jmqp1XzJI6EK1I1HlLWPzRnC4i-eg9BXt5zTyXrBobxs9Zhsrkq5Wg9jL9IJYnxHvbUOmlFTfBr1dkwvJ9ga3_XB2LhXCP5xoR3A2s_c9HewwfMXtpOL57DOV9tXAWZ6GwHJf4Ym60oD7dCBRMz_MKFuXYXdmNCN014MsJzUxuK0x5liHpEwDnfwYuMI-a52K2SqPyQSXLhPtXJunwRtcQBb9C55vdYf41Gn6AW8y1jYH_awO_um0KT7nUmCGV7COXe1Hp97__Fs5ghVUIDQSgxB0DZMf56FI7zJnRLdidPxFR-YiK-PvVpu6aPP7JVSBfnWp9W2dtpuSU7p48aakb2fHtp3jnKX-9N_aC5pStt0pzlFgFqu48DsljTan-UKUm1zsld6Ii1HDQND-KvrNaTs-YjaPjPdoDyv0CRUPgtOzdGKXOWKBXKzRaBYExQmmsaEGj3d3_arH0PwL79DINqnXFNFguDOwB3_kftIJiweIk4-z0hUGXRrU9G8rKep0SNSAxwJLzI1tE0F573B_aDoBfwtRU-PT6YhVmk7XE6lSsff43L0a9ypQE56QgI5tcdK8Zj8xdeM_jMBf0CaHNETP01yAd-ltmnQdw34zBG8q0YRfDbga5R3Y2HI4lWITpMyNIooPyt-1q-ROKPK_wOdyP_5OiXIV_8GU4cLkYIP4eJ8sGQm0LbxybeQMq7J7CedrofcMisJnKPip92KbSRkc-ji5k1zvvw-0Uh-KJzAeJX1w4t4lPegtBMuQH6bg13hLysaN1qhmVfvFp-rkKX4etxQXiiFKgY2tKL4vy9DIffDccI&cid=CAASEuRohFGM9PW3wU5v93OSB0y1Pg&rfl=1%2Chttp%253A%252F%252Finsider.foxnews.com%252F%240, line 3: ReferenceError: require is not defined
+1529368421049	geckodriver::marionette	ERROR	Failed to stop browser process
+1529368453811	geckodriver	INFO	geckodriver 0.20.0
+1529368453818	geckodriver	INFO	Listening on 127.0.0.1:62902
+1529368454832	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-profile" "/var/folders/24/43sdwrg509z6q0cc7dx_v4j00000gn/T/rust_mozprofile.s6KKcdKNBK7y"
+*** You are running in headless mode.
+1529368455568	Marionette	INFO	Enabled via --marionette
+2018-06-18 19:34:16.633 plugin-container[12682:600221] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x743f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1529368457058	Marionette	INFO	Listening on port 62913
+1529368457118	Marionette	WARN	TLS certificate errors will be ignored for this session
+2018-06-18 19:34:17.595 plugin-container[12683:600303] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x773f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1529368487966	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1529368488373	geckodriver::marionette	ERROR	Failed to stop browser process
+1529368700407	geckodriver	INFO	geckodriver 0.20.0
+1529368700416	geckodriver	INFO	Listening on 127.0.0.1:64202
+1529368701430	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-profile" "/var/folders/24/43sdwrg509z6q0cc7dx_v4j00000gn/T/rust_mozprofile.HddktrlI02YI"
+*** You are running in headless mode.
+1529368702246	Marionette	INFO	Enabled via --marionette
+2018-06-18 19:38:23.459 plugin-container[12737:603876] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x7b3f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1529368703920	Marionette	INFO	Listening on port 64209
+1529368703944	Marionette	WARN	TLS certificate errors will be ignored for this session
+2018-06-18 19:38:24.653 plugin-container[12738:603947] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x823f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1529368731451	geckodriver::marionette	ERROR	Failed to stop browser process
+1529370137410	geckodriver	INFO	geckodriver 0.20.0
+1529370137443	geckodriver	INFO	Listening on 127.0.0.1:53943
+1529370138400	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-profile" "/var/folders/24/43sdwrg509z6q0cc7dx_v4j00000gn/T/rust_mozprofile.19gmOS0U1TUJ"
+*** You are running in headless mode.
+1529370139466	Marionette	INFO	Enabled via --marionette
+2018-06-18 20:02:20.691 plugin-container[12811:616147] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x7f3f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1529370141344	Marionette	INFO	Listening on port 53954
+1529370141422	Marionette	WARN	TLS certificate errors will be ignored for this session
+2018-06-18 20:02:21.869 plugin-container[12812:616226] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x7c03, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1529370157399	geckodriver	INFO	geckodriver 0.20.0
+1529370157406	geckodriver	INFO	Listening on 127.0.0.1:54108
+1529370158427	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-profile" "/var/folders/24/43sdwrg509z6q0cc7dx_v4j00000gn/T/rust_mozprofile.gCrPsS2vzZyL"
+*** You are running in headless mode.
+1529370159224	Marionette	INFO	Enabled via --marionette
+2018-06-18 20:02:40.317 plugin-container[12818:616517] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x7f03, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1529370160748	Marionette	INFO	Listening on port 54119
+1529370160816	Marionette	WARN	TLS certificate errors will be ignored for this session
+2018-06-18 20:02:41.359 plugin-container[12819:616594] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x7e03, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1529370337708	geckodriver	INFO	geckodriver 0.20.0
+1529370337716	geckodriver	INFO	Listening on 127.0.0.1:55232
+1529370338730	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-profile" "/var/folders/24/43sdwrg509z6q0cc7dx_v4j00000gn/T/rust_mozprofile.chHDPt3kxkot"
+*** You are running in headless mode.
+1529370339588	Marionette	INFO	Enabled via --marionette
+2018-06-18 20:05:40.718 plugin-container[12827:618012] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x803f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1529370341200	Marionette	INFO	Listening on port 55243
+1529370341238	Marionette	WARN	TLS certificate errors will be ignored for this session
+2018-06-18 20:05:41.837 plugin-container[12828:618094] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x7b3f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1529370683715	geckodriver	INFO	geckodriver 0.20.0
+1529370683726	geckodriver	INFO	Listening on 127.0.0.1:57162
+1529370684740	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-profile" "/var/folders/24/43sdwrg509z6q0cc7dx_v4j00000gn/T/rust_mozprofile.XOOfAjv1ApOV"
+*** You are running in headless mode.
+1529370685584	Marionette	INFO	Enabled via --marionette
+2018-06-18 20:11:26.725 plugin-container[12840:622435] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x873f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1529370687358	Marionette	INFO	Listening on port 57173
+1529370687452	Marionette	WARN	TLS certificate errors will be ignored for this session
+2018-06-18 20:11:27.889 plugin-container[12841:622516] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x813f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1529371145573	geckodriver	INFO	geckodriver 0.20.0
+1529371145585	geckodriver	INFO	Listening on 127.0.0.1:59551
+1529371146595	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-profile" "/var/folders/24/43sdwrg509z6q0cc7dx_v4j00000gn/T/rust_mozprofile.211N6MfsDgFQ"
+*** You are running in headless mode.
+1529371147414	Marionette	INFO	Enabled via --marionette
+2018-06-18 20:19:08.730 plugin-container[12850:626638] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x8643, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1529371149504	Marionette	INFO	Listening on port 59566
+1529371149566	Marionette	WARN	TLS certificate errors will be ignored for this session
+2018-06-18 20:19:10.146 plugin-container[12851:626716] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x773f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1529371217423	geckodriver	INFO	geckodriver 0.20.0
+1529371217432	geckodriver	INFO	Listening on 127.0.0.1:60318
+1529371218447	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-profile" "/var/folders/24/43sdwrg509z6q0cc7dx_v4j00000gn/T/rust_mozprofile.tp4YmqRKKJbT"
+*** You are running in headless mode.
+1529371219376	Marionette	INFO	Enabled via --marionette
+2018-06-18 20:20:20.710 plugin-container[12857:627344] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x813f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1529371221430	Marionette	INFO	Listening on port 60329
+1529371221494	Marionette	WARN	TLS certificate errors will be ignored for this session
+2018-06-18 20:20:22.317 plugin-container[12859:627424] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x793f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x2C00AF,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x8C0006,name=PWebSocket::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1529371255992	geckodriver::marionette	ERROR	Failed to stop browser process
+1529377656579	geckodriver	INFO	geckodriver 0.20.0
+1529377656588	geckodriver	INFO	Listening on 127.0.0.1:53631
+1529377657608	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-profile" "/var/folders/24/43sdwrg509z6q0cc7dx_v4j00000gn/T/rust_mozprofile.6kFf8M0C3G7m"
+*** You are running in headless mode.
+1529377658436	Marionette	INFO	Enabled via --marionette
+2018-06-18 22:07:39.589 plugin-container[13344:686570] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x793f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1529377660242	Marionette	INFO	Listening on port 53642
+1529377660372	Marionette	WARN	TLS certificate errors will be ignored for this session
+2018-06-18 22:07:40.781 plugin-container[13345:686655] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x7443, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+JavaScript error: https://central.washingtonexaminer.com/scripts/signup.js, line 1: TypeError: $ is not a function
+1529377717403	geckodriver	INFO	geckodriver 0.20.0
+1529377717412	geckodriver	INFO	Listening on 127.0.0.1:54051
+1529377718437	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-profile" "/var/folders/24/43sdwrg509z6q0cc7dx_v4j00000gn/T/rust_mozprofile.Y6J5JQN2jxDb"
+*** You are running in headless mode.
+1529377719270	Marionette	INFO	Enabled via --marionette
+2018-06-18 22:08:41.020 plugin-container[13352:687233] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x8243, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-06-18 22:08:41.535 plugin-container[13353:687339] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x8007, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1529377722380	Marionette	INFO	Listening on port 54058
+1529377722492	Marionette	WARN	TLS certificate errors will be ignored for this session
+1529377853099	geckodriver	INFO	geckodriver 0.20.0
+1529377853108	geckodriver	INFO	Listening on 127.0.0.1:54980
+1529377854133	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-profile" "/var/folders/24/43sdwrg509z6q0cc7dx_v4j00000gn/T/rust_mozprofile.5BWo5PiPhS76"
+*** You are running in headless mode.
+1529377855072	Marionette	INFO	Enabled via --marionette
+2018-06-18 22:10:56.529 plugin-container[13361:688727] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x7c43, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1529377857588	Marionette	INFO	Listening on port 54993
+1529377857614	Marionette	WARN	TLS certificate errors will be ignored for this session
+2018-06-18 22:10:57.729 plugin-container[13362:688801] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x7a3f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+JavaScript error: https://central.washingtonexaminer.com/scripts/signup.js, line 1: TypeError: $ is not a function
+1529822820022	geckodriver	INFO	geckodriver 0.20.0
+1529822820037	geckodriver	INFO	geckodriver 0.20.0
+1529822820040	geckodriver	INFO	Listening on 127.0.0.1:57235
+1529822820050	geckodriver	INFO	Listening on 127.0.0.1:57236
+1529822821108	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-profile" "/var/folders/24/43sdwrg509z6q0cc7dx_v4j00000gn/T/rust_mozprofile.o3SpsdS33H5J"
+1529822821111	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-profile" "/var/folders/24/43sdwrg509z6q0cc7dx_v4j00000gn/T/rust_mozprofile.cMGRxMvZmbWn"
+*** You are running in headless mode.
+*** You are running in headless mode.
+1529822822674	Marionette	INFO	Enabled via --marionette
+1529822822674	Marionette	INFO	Enabled via --marionette
+2018-06-24 01:47:04.532 plugin-container[16974:1451494] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x7143, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-06-24 01:47:04.533 plugin-container[16975:1451495] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x8447, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-06-24 01:47:05.507 plugin-container[16976:1451610] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x7d3f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1529822826376	Marionette	INFO	Listening on port 57261
+1529822826396	Marionette	WARN	TLS certificate errors will be ignored for this session
+1529822826632	Marionette	INFO	Listening on port 57262
+1529822826698	Marionette	WARN	TLS certificate errors will be ignored for this session
+2018-06-24 01:47:06.863 plugin-container[16977:1451678] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x843f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+JavaScript warning: https://vidstat.taboola.com/vpaid/vPlayer/player/v9.0.773/OvaMediaPlayer.js, line 3: unreachable code after return statement
+JavaScript warning: https://vidstat.taboola.com/vpaid/vPlayer/player/v9.0.773/OvaMediaPlayer.js, line 3: unreachable code after return statement
+JavaScript warning: https://vidstat.taboola.com/vpaid/vPlayer/player/v9.0.773/OvaMediaPlayer.js, line 3: unreachable code after return statement
+JavaScript warning: https://vidstat.taboola.com/vpaid/vPlayer/player/v9.0.773/OvaMediaPlayer.js, line 3: unreachable code after return statement
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript error: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 303: NS_ERROR_NOT_INITIALIZED: 
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript error: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 303: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://cdn.spotxcdn.com/integration/ados/v1/ados/beta.js, line 34: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://cdn.spotxcdn.com/integration/ados/v1/ados/beta.js, line 34: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://cdn.spotxcdn.com/integration/ados/v1/ados/beta.js, line 34: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://cdn.spotxcdn.com/integration/ados/v1/ados/beta.js, line 34: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://cdn.spotxcdn.com/integration/ados/v1/ados/beta.js, line 34: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://cdn.spotxcdn.com/integration/ados/v1/ados/beta.js, line 34: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://cdn.spotxcdn.com/integration/ados/v1/ados/beta.js, line 34: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://cdn.spotxcdn.com/integration/ados/v1/ados/beta.js, line 34: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://cdn.spotxcdn.com/integration/ados/v1/ados/beta.js, line 34: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://cdn.spotxcdn.com/integration/ados/v1/ados/beta.js, line 34: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://cdn.spotxcdn.com/integration/ados/v1/ados/beta.js, line 34: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://cdn.spotxcdn.com/integration/ados/v1/ados/beta.js, line 34: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://cdn.spotxcdn.com/integration/ados/v1/ados/beta.js, line 34: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://cdn.spotxcdn.com/integration/ados/v1/ados/beta.js, line 34: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://cdn.spotxcdn.com/integration/ados/v1/ados/beta.js, line 34: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://cdn.spotxcdn.com/integration/ados/v1/ados/beta.js, line 34: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://cdn.spotxcdn.com/integration/ados/v1/ados/beta.js, line 34: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://cdn.spotxcdn.com/integration/ados/v1/ados/beta.js, line 34: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://cdn.spotxcdn.com/integration/ados/v1/ados/beta.js, line 34: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://cdn.spotxcdn.com/integration/ados/v1/ados/beta.js, line 34: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://cdn.spotxcdn.com/integration/ados/v1/ados/beta.js, line 34: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://cdn.spotxcdn.com/integration/ados/v1/ados/beta.js, line 34: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://cdn.spotxcdn.com/integration/ados/v1/ados/beta.js, line 34: NS_ERROR_NOT_INITIALIZED: 
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript error: https://cdn.spotxcdn.com/integration/ados/v1/ados/beta.js, line 34: NS_ERROR_NOT_INITIALIZED: 
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript error: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 303: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 303: NS_ERROR_NOT_INITIALIZED: 
+1529822892324	geckodriver::marionette	ERROR	Failed to stop browser process
+1529823735023	geckodriver	INFO	geckodriver 0.20.0
+1529823735023	geckodriver	INFO	geckodriver 0.20.0
+1529823735038	geckodriver	INFO	Listening on 127.0.0.1:58375
+1529823735038	geckodriver	INFO	Listening on 127.0.0.1:58374
+1529823736106	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-profile" "/var/folders/24/43sdwrg509z6q0cc7dx_v4j00000gn/T/rust_mozprofile.hPHMBYUeIqAn"
+1529823736127	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-profile" "/var/folders/24/43sdwrg509z6q0cc7dx_v4j00000gn/T/rust_mozprofile.B55wboDo2jdI"
+*** You are running in headless mode.
+*** You are running in headless mode.
+1529823737396	Marionette	INFO	Enabled via --marionette
+1529823737404	Marionette	INFO	Enabled via --marionette
+2018-06-24 02:02:19.237 plugin-container[17017:1458608] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x7b43, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-06-24 02:02:19.251 plugin-container[17016:1458606] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x7443, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1529823740978	Marionette	INFO	Listening on port 58401
+1529823741030	Marionette	INFO	Listening on port 58400
+1529823741044	Marionette	WARN	TLS certificate errors will be ignored for this session
+2018-06-24 02:02:21.078 plugin-container[17018:1458769] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x763f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-06-24 02:02:21.115 plugin-container[17019:1458770] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x7f43, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1529823741134	Marionette	WARN	TLS certificate errors will be ignored for this session
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1529823756788	geckodriver::marionette	ERROR	Failed to stop browser process
+JavaScript warning: https://vidstat.taboola.com/vpaid/vPlayer/player/v9.0.795/OvaMediaPlayer.js, line 3: unreachable code after return statement
+JavaScript warning: https://vidstat.taboola.com/vpaid/vPlayer/player/v9.0.795/OvaMediaPlayer.js, line 3: unreachable code after return statement
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript error: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 303: NS_ERROR_NOT_INITIALIZED: 
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript error: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 303: NS_ERROR_NOT_INITIALIZED: 
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1529823778379	geckodriver::marionette	ERROR	Failed to stop browser process
+1529823938146	geckodriver	INFO	geckodriver 0.20.0
+1529823938160	geckodriver	INFO	Listening on 127.0.0.1:59188
+1529823938168	geckodriver	INFO	geckodriver 0.20.0
+1529823938179	geckodriver	INFO	Listening on 127.0.0.1:59189
+1529823939216	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-profile" "/var/folders/24/43sdwrg509z6q0cc7dx_v4j00000gn/T/rust_mozprofile.f7fYdyai6GXF"
+1529823939223	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-profile" "/var/folders/24/43sdwrg509z6q0cc7dx_v4j00000gn/T/rust_mozprofile.ZiaDa4yrlPUh"
+*** You are running in headless mode.
+*** You are running in headless mode.
+1529823940332	Marionette	INFO	Enabled via --marionette
+1529823940354	Marionette	INFO	Enabled via --marionette
+2018-06-24 02:05:42.214 plugin-container[17037:1461057] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x7747, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-06-24 02:05:42.282 plugin-container[17038:1461059] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x8247, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-06-24 02:05:43.161 plugin-container[17039:1461174] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x8447, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-06-24 02:05:43.233 plugin-container[17040:1461176] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x7547, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1529823944080	Marionette	INFO	Listening on port 59212
+1529823944134	Marionette	INFO	Listening on port 59214
+1529823944162	Marionette	WARN	TLS certificate errors will be ignored for this session
+1529823944164	Marionette	WARN	TLS certificate errors will be ignored for this session
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1529823961110	geckodriver::marionette	ERROR	Failed to stop browser process
+JavaScript warning: https://vidstat.taboola.com/vpaid/vPlayer/player/v9.0.773/OvaMediaPlayer.js, line 3: unreachable code after return statement
+JavaScript warning: https://vidstat.taboola.com/vpaid/vPlayer/player/v9.0.773/OvaMediaPlayer.js, line 3: unreachable code after return statement
+JavaScript warning: https://vidstat.taboola.com/vpaid/vPlayer/player/v9.0.773/OvaMediaPlayer.js, line 3: unreachable code after return statement
+JavaScript warning: https://vidstat.taboola.com/vpaid/vPlayer/player/v9.0.773/OvaMediaPlayer.js, line 3: unreachable code after return statement
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript error: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 303: NS_ERROR_NOT_INITIALIZED: 
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript error: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 303: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 303: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 303: NS_ERROR_NOT_INITIALIZED: 
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript error: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 303: NS_ERROR_NOT_INITIALIZED: 
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 20: Error: WebGL warning: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript error: https://cdn-ssl.vidible.tv/prod/ad-client/js/2.17.13/0.js, line 303: NS_ERROR_NOT_INITIALIZED: 
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1529823991240	geckodriver::marionette	ERROR	Failed to stop browser process
+1529824868070	geckodriver	INFO	geckodriver 0.20.0
+1529824868082	geckodriver	INFO	Listening on 127.0.0.1:60200
+1529824868082	geckodriver	INFO	geckodriver 0.20.0
+1529824868089	geckodriver	INFO	Listening on 127.0.0.1:60201
+1529824869120	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-profile" "/var/folders/24/43sdwrg509z6q0cc7dx_v4j00000gn/T/rust_mozprofile.yWqb9EROwTOy"
+1529824869120	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-profile" "/var/folders/24/43sdwrg509z6q0cc7dx_v4j00000gn/T/rust_mozprofile.EyrgXK334sos"
+*** You are running in headless mode.
+*** You are running in headless mode.
+1529824870446	Marionette	INFO	Enabled via --marionette
+1529824870450	Marionette	INFO	Enabled via --marionette
+2018-06-24 02:21:12.430 plugin-container[17081:1468498] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x8403, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-06-24 02:21:12.444 plugin-container[17082:1468500] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x8343, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-06-24 02:21:13.028 plugin-container[17083:1468613] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x7407, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-06-24 02:21:13.493 plugin-container[17084:1468642] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x7e3f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1529824873882	Marionette	INFO	Listening on port 60228
+1529824873950	Marionette	WARN	TLS certificate errors will be ignored for this session
+1529824873954	Marionette	INFO	Listening on port 60227
+1529824874054	Marionette	WARN	TLS certificate errors will be ignored for this session
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1529824888047	geckodriver::marionette	ERROR	Failed to stop browser process
+1529825002447	geckodriver::marionette	ERROR	Failed to stop browser process
+1529897025312	geckodriver	INFO	geckodriver 0.20.0
+1529897025312	geckodriver	INFO	geckodriver 0.20.0
+1529897025327	geckodriver	INFO	Listening on 127.0.0.1:64033
+1529897025327	geckodriver	INFO	Listening on 127.0.0.1:64034
+1529897026354	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-profile" "/var/folders/24/43sdwrg509z6q0cc7dx_v4j00000gn/T/rust_mozprofile.3ojmAgbBJswn"
+1529897026355	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-profile" "/var/folders/24/43sdwrg509z6q0cc7dx_v4j00000gn/T/rust_mozprofile.kYK6wbvTZU5t"
+*** You are running in headless mode.
+*** You are running in headless mode.
+1529897027700	Marionette	INFO	Enabled via --marionette
+1529897027700	Marionette	INFO	Enabled via --marionette
+2018-06-24 22:23:49.611 plugin-container[17744:1591726] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x7f07, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-06-24 22:23:49.611 plugin-container[17745:1591727] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x833b, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-06-24 22:23:50.571 plugin-container[17746:1591849] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x8347, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1529897031312	Marionette	INFO	Listening on port 64061
+1529897031316	Marionette	INFO	Listening on port 64060
+1529897031376	Marionette	WARN	TLS certificate errors will be ignored for this session
+1529897031376	Marionette	WARN	TLS certificate errors will be ignored for this session
+2018-06-24 22:23:51.578 plugin-container[17747:1591905] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x8907, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1529897068194	geckodriver::marionette	ERROR	Failed to stop browser process
+1529897112862	geckodriver::marionette	ERROR	Failed to stop browser process
+1529897390171	geckodriver	INFO	geckodriver 0.20.0
+1529897390176	geckodriver	INFO	geckodriver 0.20.0
+1529897390184	geckodriver	INFO	Listening on 127.0.0.1:64998
+1529897390190	geckodriver	INFO	Listening on 127.0.0.1:64999
+1529897391210	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-profile" "/var/folders/24/43sdwrg509z6q0cc7dx_v4j00000gn/T/rust_mozprofile.Mx58OBuYrQ95"
+1529897391210	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-profile" "/var/folders/24/43sdwrg509z6q0cc7dx_v4j00000gn/T/rust_mozprofile.lY0xZXZG9sJf"
+*** You are running in headless mode.
+*** You are running in headless mode.
+1529897392012	Marionette	INFO	Enabled via --marionette
+1529897392026	Marionette	INFO	Enabled via --marionette
+2018-06-24 22:29:53.487 plugin-container[17763:1594359] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x8147, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-06-24 22:29:53.622 plugin-container[17764:1594361] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x720b, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-06-24 22:29:54.522 plugin-container[17765:1594491] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x7e0b, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1529897394774	Marionette	INFO	Listening on port 65024
+1529897394872	Marionette	WARN	TLS certificate errors will be ignored for this session
+1529897394878	Marionette	INFO	Listening on port 65023
+1529897394998	Marionette	WARN	TLS certificate errors will be ignored for this session
+2018-06-24 22:29:55.714 plugin-container[17766:1594547] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x7d43, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1529897476538	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+1529897477251	geckodriver::marionette	ERROR	Failed to stop browser process
+1529897518471	geckodriver::marionette	ERROR	Failed to stop browser process
+1529898184128	geckodriver	INFO	geckodriver 0.20.0
+1529898184140	geckodriver	INFO	Listening on 127.0.0.1:49640
+1529898184141	geckodriver	INFO	geckodriver 0.20.0
+1529898184150	geckodriver	INFO	Listening on 127.0.0.1:49641
+1529898185178	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-profile" "/var/folders/24/43sdwrg509z6q0cc7dx_v4j00000gn/T/rust_mozprofile.3Vo0NNOjcR1V"
+1529898185178	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-profile" "/var/folders/24/43sdwrg509z6q0cc7dx_v4j00000gn/T/rust_mozprofile.HNILCuJEks7j"
+*** You are running in headless mode.
+*** You are running in headless mode.
+1529898186086	Marionette	INFO	Enabled via --marionette
+1529898186088	Marionette	INFO	Enabled via --marionette
+2018-06-24 22:43:07.743 plugin-container[17806:1601659] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x7f0b, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-06-24 22:43:07.840 plugin-container[17807:1601661] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x830b, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-06-24 22:43:08.764 plugin-container[17808:1601781] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x7b43, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1529898189124	Marionette	INFO	Listening on port 49668
+1529898189148	Marionette	WARN	TLS certificate errors will be ignored for this session
+1529898189206	Marionette	INFO	Listening on port 49667
+1529898189246	Marionette	WARN	TLS certificate errors will be ignored for this session
+2018-06-24 22:43:09.898 plugin-container[17809:1601843] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x7f3f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1529898260640	addons.productaddons	WARN	Failed downloading XML, status: 0, reason: timeout
+1529898260644	addons.productaddons	WARN	Failed downloading XML, status: 0, reason: timeout
+1529898334038	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+1529898334241	geckodriver::marionette	ERROR	Failed to stop browser process
+1529898433142	geckodriver::marionette	ERROR	Failed to stop browser process

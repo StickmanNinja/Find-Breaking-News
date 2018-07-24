@@ -66,3 +66,11 @@ def lookupUser(username, password):
             return True
         else:
             return False
+
+
+# This function sets up the table required for storing news stories.
+def setupStoryTable():
+    global conn
+    cursor = conn.cursor()
+    query = "CREATE TABLE IF NOT EXISTS `stories`( `datanumber` int NOT NULL AUTO_INCREMENT, `source` text NOT NULL, `headline` text NOT NULL, `url` text NOT NULL, PRIMARY KEY (datanumber)) ENGINE=MEMORY;"
+    cursor.execute(query)

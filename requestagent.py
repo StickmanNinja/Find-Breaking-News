@@ -46,7 +46,7 @@ def home():
 
 @app.route("/success")
 def success():
-    return "<h1>Account created successfully!</h1>"
+    return render_template("panel.html", user=session["user"])
 
 @app.route("/signup", methods = ["GET","POST"])
 def signup():
