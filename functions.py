@@ -86,5 +86,11 @@ def setupStoryTable():
     query = "CREATE TABLE IF NOT EXISTS `stories`( `datanumber` int NOT NULL AUTO_INCREMENT, `source` text NOT NULL, `headline` text NOT NULL, `url` text NOT NULL, PRIMARY KEY (datanumber)) ENGINE=MEMORY;"
     cursor.execute(query)
 
+def addToken(user, token):
+    global conn
+    cursor = conn.cursor()
+    query = "UPDATE `users` SET trellotoken='" + str(token) + "' WHERE username='" + str(username) + "'"
+    cursor.execute(query)
+
 # This should always run to ensure the users table exists in the database.
 initTable()
