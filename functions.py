@@ -19,7 +19,7 @@ conn = pymysql.connect(host=hostname,
 def initTable():
     global conn
     cursor = conn.cursor()
-    query = "CREATE TABLE IF NOT EXISTS `users`( `datanumber` int NOT NULL AUTO_INCREMENT, `username` text NOT NULL, `password` text NOT NULL, `trellotoken` text NULL, PRIMARY KEY (datanumber)) ENGINE=MEMORY;"
+    query = "CREATE TABLE IF NOT EXISTS `users`( `datanumber` int NOT NULL AUTO_INCREMENT, `username` text NOT NULL, `password` text NOT NULL, `trellotoken` text NULL, `trelloboardid` text NULL, `email` text NULL, PRIMARY KEY (datanumber)) ENGINE=MEMORY;"
     cursor.execute(query)
 
 # This function adds users to database.
