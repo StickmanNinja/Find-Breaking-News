@@ -15,26 +15,49 @@ conn = pymysql.connect(host=hostname,
                              charset='utf8mb4',
                              cursorclass=pymysql.cursors.DictCursor)
 
+# This function sets the timeout settings on the MySQL server.
+class DB:
+    conn = None
+
+    def connect(self):
+        self.conn = pymysql.connect(host=hostname,
+                             user=username,
+                             password=password,
+                             db=dbname,
+                             charset='utf8mb4',
+                             cursorclass=pymysql.cursors.DictCursor)
+
+    def query(self, sql):
+        try:
+            cursor = self.conn.cursor()
+            cursor.execute(sql)
+        except:
+            self.connect()
+            cursor = self.conn.cursor()
+            cursor.execute(sql)
+        return cursor
+
+
+# Creating new instance of DB class
+db = DB()
+
 # Creating a function that creates required data table.
 def initTable():
-    global conn
-    cursor = conn.cursor()
+    global db
     query = "CREATE TABLE IF NOT EXISTS `users`( `datanumber` int NOT NULL AUTO_INCREMENT, `username` text NOT NULL, `password` text NOT NULL, `trellotoken` text NULL, `trelloboardid` text NULL, `email` text NULL, PRIMARY KEY (datanumber)) ENGINE=MEMORY;"
-    cursor.execute(query)
+    db.query(query)
 
 # This function adds users to database.
 def createUser(username, password):
-    global conn
-    cursor = conn.cursor()
-    query = "INSERT INTO `users` (`username`,`password`) VALUES (%s, %s)"
-    cursor.execute(query, [username, password])
+    global db
+    query = "INSERT INTO `users` (`username`,`password`) VALUES ('%s', '%s')" % (username, password)
+    db.query(query)
 
 # This function checks to see if username is available. If so, it returns True.
 def checkUser(username):
-    global conn
-    cursor = conn.cursor()
-    query = "SELECT * FROM `users` WHERE username = '" + str(username) + "'"
-    cursor.execute(query)
+    global db
+    query = "SELECT * FROM `users` WHERE username = '" + str(username) + "'"    
+    cursor = db.query(query)
     row = cursor.fetchone()
     if row == None:
        return True
@@ -57,10 +80,9 @@ def checkString(password):
 
 # This function looks for the username and password combo in database.
 def lookupUser(username, password):
-    global conn
-    cursor = conn.cursor()
+    global db
     query = "SELECT password FROM `users` WHERE username = '" + str(username) + "'"
-    cursor.execute(query)
+    cursor = db.query(query)
     for row in cursor:
         if row["password"] == password:
             return True
@@ -68,10 +90,9 @@ def lookupUser(username, password):
             return False
 
 def lookupToken(username):
-    global conn
-    cursor = conn.cursor()
+    global db
     query = "SELECT trellotoken FROM `users` WHERE username = '" + str(username) + "'"
-    cursor.execute(query)
+    cursor = db.query(query)
     for row in cursor:
         if row["trellotoken"] != None:
             return True
@@ -81,16 +102,14 @@ def lookupToken(username):
 
 # This function sets up the table required for storing news stories.
 def setupStoryTable():
-    global conn
-    cursor = conn.cursor()
+    global db
     query = "CREATE TABLE IF NOT EXISTS `stories`( `datanumber` int NOT NULL AUTO_INCREMENT, `source` text NOT NULL, `headline` text NOT NULL, `url` text NOT NULL, PRIMARY KEY (datanumber)) ENGINE=MEMORY;"
-    cursor.execute(query)
+    db.query(query)
 
 def addToken(user, token):
-    global conn
-    cursor = conn.cursor()
+    global db
     query = "UPDATE `users` SET trellotoken='" + str(token) + "' WHERE username='" + str(username) + "'"
-    cursor.execute(query)
+    db.query(query)
 
 # This should always run to ensure the users table exists in the database.
 initTable()
