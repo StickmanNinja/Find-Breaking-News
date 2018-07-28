@@ -15,7 +15,8 @@ conn = pymysql.connect(host=hostname,
                              charset='utf8mb4',
                              cursorclass=pymysql.cursors.DictCursor)
 
-# This function sets the timeout settings on the MySQL server.
+
+# The DB class enables you to connect to a MySQL server without experiencing timeout exceptions.
 class DB:
     conn = None
 
@@ -89,6 +90,7 @@ def lookupUser(username, password):
         else:
             return False
 
+# This function helps you find a user's Trello token by username.
 def lookupToken(username):
     global db
     query = "SELECT trellotoken FROM `users` WHERE username = '" + str(username) + "'"
@@ -106,6 +108,7 @@ def setupStoryTable():
     query = "CREATE TABLE IF NOT EXISTS `stories`( `datanumber` int NOT NULL AUTO_INCREMENT, `source` text NOT NULL, `headline` text NOT NULL, `url` text NOT NULL, PRIMARY KEY (datanumber)) ENGINE=MEMORY;"
     db.query(query)
 
+# This function adds a trello token value to a user's account.
 def addToken(user, token):
     global db
     query = "UPDATE `users` SET trellotoken='" + str(token) + "' WHERE username='" + str(username) + "'"
