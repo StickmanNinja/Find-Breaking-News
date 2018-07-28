@@ -109,7 +109,7 @@ def setupStoryTable():
     db.query(query)
 
 # This function adds a trello token value to a user's account.
-def addToken(user, token):
+def addToken(username, token):
     global db
     query = "UPDATE `users` SET trellotoken='" + str(token) + "' WHERE username='" + str(username) + "'"
     db.query(query)
