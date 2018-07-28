@@ -41,10 +41,10 @@ def trello():
     if lookupToken(session["user"]) == True:
         return "You already gave us your trello token!"
     else:
-        return render_template("trello_notoken")
+        return render_template("trellonotoken.html")
 
-@app.route("/submittrellotoken", methods = ["GET","POST"])
-def submission():
+@app.route("/addtrellotoken", methods = ["GET","POST"])
+def addtrellotoken():
     global key
     global token
     if request.method == 'POST':
@@ -54,6 +54,8 @@ def submission():
             return "Token Added Successfully!"
         else:
             return "Uh oh. That's not a valid token!"
+    else:
+        return render_template("trellonotoken.html")
 
 @app.route("/email")
 def email():
