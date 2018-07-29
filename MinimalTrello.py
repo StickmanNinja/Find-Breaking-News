@@ -95,7 +95,7 @@ class Trello(object):
         jsonresponse = json.loads(response.text)
         return jsonresponse
 
-    # This function will return True if the token works. Otherwise, it will return False.
+     # This function will return True if the token works. Otherwise, it will return False.
     def checkToken(self, token):
         url = "https://api.trello.com/1/tokens/" + str(token) + "?token=" + str(self.token) + "&key=" + str(self.key)
         response = requests.request("GET", url)
@@ -104,3 +104,20 @@ class Trello(object):
             return True
         except:
             return False
+
+    # Returns Trello user info in JSON format
+    def getUserId(self, giventoken):
+        url = "https://api.trello.com/1/tokens/" + str(giventoken) + "?token=" + self.token + "&key=" + self.key
+        response = requests.request("GET", url)
+        jsonresponse = json.loads(response.text)
+        return jsonresponse["idMember"]
+
+        
+    
+    # This function returns all boards with their ids and shortUrls.
+    def getBoards(self, userid, token):
+        url = "https://api.trello.com/1/members/" + str(userid) + "/boards"
+        querystring = {"key":self.key,"token":str(token),"fields":"shortUrl, id"}
+        response = requests.request("GET", url, params=querystring)
+        jsonresponse = json.loads(response.text)
+        return jsonresponse

@@ -6,11 +6,11 @@
 
 <body>
     <h1>Trello</h1>
-    <p>You need to give us access to your Trello account.</p><br>
+    <p>Please paste the link to the Trello board you want to add stories to:</p><br>
     <a href="https://trello.com/1/authorize?expiration=never&name=MyPersonalToken&scope=read&response_type=token&key=79bad24bd4fed75755bf34a4a3b77232" target="_blank">Click Here to authorize.</a><br><br><br>
-    <form action="{{url_for('submittrellotoken')}}">
+    <form action="{{ url_for('submittrellotoken') }}">
         Token:<br>
-        <input type="text" name="trellotoken"><br>
+        <input type="text" name="trellolink"><br>
         <input type="submit" value="Submit">
     </form>
 </body>
