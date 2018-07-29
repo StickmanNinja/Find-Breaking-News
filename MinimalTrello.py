@@ -62,6 +62,7 @@ class Trello(object):
 
     # This function creates a new list in a specified board.
     def createList(self, name, idBoard, idListSource=0, pos=0):
+        url = "https://api.trello.com/1/lists"
         query = {"name": name,
                  "idBoard":idBoard,
                  "key":self.key,
@@ -69,7 +70,7 @@ class Trello(object):
         for i in idListSource, pos:
             if i != 0:
                 query[str(varname(i, locals()))]
-        response = requests.request("POST", self.url, params=query)
+        response = requests.request("POST", url, params=query)
         jsonresponse = json.loads(response.text)
         print jsonresponse
         return jsonresponse
@@ -92,8 +93,9 @@ class Trello(object):
             query["dueComplete"] = dueComplete
         # A simple post request to Trello's API, with the response being converted using the json module.
         response = requests.request("POST", url, params=query)
+        print response
         jsonresponse = json.loads(response.text)
-        return jsonresponse
+        print jsonresponse
 
      # This function will return True if the token works. Otherwise, it will return False.
     def checkToken(self, token):
@@ -115,9 +117,9 @@ class Trello(object):
         
     
     # This function returns all boards with their ids and shortUrls.
-    def getBoards(self, userid, token):
+    def getBoards(self, userid):
         url = "https://api.trello.com/1/members/" + str(userid) + "/boards"
-        querystring = {"key":self.key,"token":str(token),"fields":"shortUrl, id"}
+        querystring = {"key":self.key,"token":str(self.token),"fields":"shortUrl, id"}
         response = requests.request("GET", url, params=querystring)
         jsonresponse = json.loads(response.text)
         return jsonresponse

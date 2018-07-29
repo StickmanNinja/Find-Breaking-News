@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Trello Upload Tool</title>
+</head>
+
+<body>
+    <h1>Trello</h1>
+    <p>Please Enter the required link</p><br>
+    <form action="{{ url_for('trellotool') }}"  method="post">
+        Token:<br>
+        <input type="text" name="url"><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>

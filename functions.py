@@ -114,5 +114,28 @@ def addToken(username, token):
     query = "UPDATE `users` SET trellotoken='" + str(token) + "' WHERE username='" + str(username) + "'"
     db.query(query)
 
+# This function gets a user's trello token from the database.
+def getToken(username):
+    global db
+    query = "SELECT trellotoken FROM `users` WHERE username = '" + str(username) + "'"
+    cursor = db.query(query)
+    for row in cursor:
+        if row["trellotoken"] != None:
+            return str(row["trellotoken"])
+
+# This function finds the shortlink in a url.
+def getShortLink(url):
+    newstring = ""
+    url = url.replace("https://trello.com/b/", "")
+    url = url.replace("/", ".")
+    for i in url:
+        if str(i) == ".":
+            break
+        else:
+            newstring = newstring + str(i)
+    return "https://trello.com/b/" + newstring
+
+
+
 # This should always run to ensure the users table exists in the database.
 initTable()

@@ -26,6 +26,22 @@ def login():
     else:
         return render_template("login.html")
 
+@app.route("/trellotool", methods = ["GET", "POST"])
+def trellotool():
+    if request.method == "POST":
+        url = request.form["url"]
+        url = getShortLink(url)
+        usertoken = getToken(session["user"])
+        userid = Trello(key, usertoken).getUserId(usertoken)
+        for i in Trello(key, usertoken).getBoards(userid):
+            if i["shortUrl"] == url:
+                targetid = i["id"]
+                Trello(key, usertoken).createList("I love pirates", targetid)
+                return "it worked"
+    else:
+        return render_template("trellotool.html")
+    
+
 @app.route("/logout")
 def logout():
     session.clear()
