@@ -3,6 +3,7 @@ from __future__ import print_function
 from flask import Flask, render_template, url_for, session, redirect, request
 from functions import *
 from MinimalTrello import *
+from PyToJSON import *
 import os
 import sys
 app = Flask(__name__)
@@ -15,6 +16,11 @@ def consolelog(x):
 app.secret_key = os.environ['BreakingNewsSecret']
 app.config['TRAP_BAD_REQUEST_ERRORS'] = True
 
+
+
+#---------------------------------------------------
+#----- Sign in, sign up, and log out functions -----
+#---------------------------------------------------
 @app.route('/login', methods = ["GET","POST"])
 def login():
     if request.method == 'POST':
@@ -26,6 +32,38 @@ def login():
     else:
         return render_template("login.html")
 
+@app.route("/logout")
+def logout():
+    session.clear()
+    if session.get("user") is None:
+        return "<h1>You did it, boy!!</h1>"
+
+    
+@app.route("/signup", methods = ["GET","POST"])
+def signup():
+    if request.method == 'POST':
+        given_username = request.form["username"]
+        given_password = request.form["password"]
+        given_confirmpassword = request.form["confirmpassword"]
+        if given_password == given_confirmpassword and checkUser(given_username) == True and checkString(given_username) == True and checkString(given_password) == True:
+            consolelog(given_username)
+            consolelog(given_password)
+            createUser(given_username, given_password)
+            session["user"] = given_username
+            return redirect(url_for('success'))
+    else:
+        return render_template("signup.html")
+
+@app.route("/success")
+def success():
+    return render_template("panel.html", user=session["user"])
+
+
+
+
+#---------------------------------------------------
+#-----            Trello Functions             -----
+#---------------------------------------------------
 @app.route("/trellotool", methods = ["GET", "POST"])
 def trellotool():
     if request.method == "POST":
@@ -40,17 +78,6 @@ def trellotool():
                 return "it worked"
     else:
         return render_template("trellotool.html")
-    
-
-@app.route("/logout")
-def logout():
-    session.clear()
-    if session.get("user") is None:
-        return "<h1>You did it, boy!!</h1>"
-
-@app.route("/JSON")
-def JSON():
-    return "JSON Example."
 
 @app.route("/trello")
 def trello():
@@ -73,35 +100,39 @@ def addtrellotoken():
     else:
         return render_template("trellonotoken.html")
 
+
+
+
+#---------------------------------------------------
+#-----            API Functions                -----
+#---------------------------------------------------
+@app.route("/JSON")
+def JSON():
+    return "JSON Example."
+
+
+
+
+
+
+#---------------------------------------------------
+#-----            Email Function               -----
+#---------------------------------------------------
 @app.route("/email")
 def email():
     return "Email Example."
 
+
+
+
+
+#---------------------------------------------------
+#-----            Home Page Function           -----
+#---------------------------------------------------
 @app.route('/')
 @app.route('/home')
 def home():
     return render_template('index.html')
-
-@app.route("/success")
-def success():
-    return render_template("panel.html", user=session["user"])
-
-@app.route("/signup", methods = ["GET","POST"])
-def signup():
-    if request.method == 'POST':
-        given_username = request.form["username"]
-        given_password = request.form["password"]
-        given_confirmpassword = request.form["confirmpassword"]
-        if given_password == given_confirmpassword and checkUser(given_username) == True and checkString(given_username) == True and checkString(given_password) == True:
-            consolelog(given_username)
-            consolelog(given_password)
-            createUser(given_username, given_password)
-            session["user"] = given_username
-            return redirect(url_for('success'))
-    else:
-        return render_template("signup.html")
-        
-    
 
 
 
