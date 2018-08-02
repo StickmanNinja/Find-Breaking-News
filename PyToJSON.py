@@ -6,7 +6,7 @@ import types
 def varType(x):
     if type(x) == list or type(x) == tuple:
         return "list" #For practical purposes, tuples are lists.
-    if type(x) == str
+    if type(x) == str:
         return "string"
     if type(x) == int or type(x) == float:
         return "number"

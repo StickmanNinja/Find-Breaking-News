@@ -82,7 +82,7 @@ def trellotool():
 @app.route("/trello")
 def trello():
     if lookupToken(session["user"]) == True:
-        return "You already gave us your trello token!"
+        return render_template("trellotool.html")
     else:
         return render_template("trellonotoken.html")
 
@@ -106,11 +106,27 @@ def addtrellotoken():
 #---------------------------------------------------
 #-----            API Functions                -----
 #---------------------------------------------------
-@app.route("/JSON")
-def JSON():
-    return "JSON Example."
+@app.route("/API")
+def API():
+    return render_template("api.html")
 
-
+@app.route("/API/app-key")
+def generateapikey():
+    user = session["user"]
+    if confirmUser(user) == True:
+        if confirmApiUser(user) == False:
+            createApiUser(user)
+        if lookupApiKey(user) == False:
+            made_key = createApiKey(user)
+            return render_template("api-key.html", key=made_key)
+        else:
+            if lookupApiKey(session["user"]) != False:
+                given_key = lookupApiKey(session["user"])
+                return render_template("api-key.html", key=given_key)
+    else:
+        redirect(url_for('login'))
+        
+        
 
 
 

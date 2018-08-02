@@ -15,7 +15,6 @@ conn = pymysql.connect(host=hostname,
                              charset='utf8mb4',
                              cursorclass=pymysql.cursors.DictCursor)
 
-
 # The DB class enables you to connect to a MySQL server without experiencing timeout exceptions.
 class DB:
     conn = None
@@ -90,6 +89,18 @@ def lookupUser(username, password):
         else:
             return False
 
+# This function confirms that a given username exists.
+def confirmUser(username):
+    global db
+    query = "SELECT username FROM `users` WHERE username = '" + str(username) + "'"
+    cursor = db.query(query)
+    for row in cursor:
+        if row["username"] != None:
+            return True
+        else:
+            return False
+
+
 # This function helps you find a user's Trello token by username.
 def lookupToken(username):
     global db
@@ -103,7 +114,7 @@ def lookupToken(username):
 
 
 # This function sets up the table required for storing news stories.
-def setupStoryTable():
+def initStoryTable():
     global db
     query = "CREATE TABLE IF NOT EXISTS `stories`( `datanumber` int NOT NULL AUTO_INCREMENT, `source` text NOT NULL, `headline` text NOT NULL, `url` text NOT NULL, PRIMARY KEY (datanumber)) ENGINE=MEMORY;"
     db.query(query)
@@ -135,7 +146,73 @@ def getShortLink(url):
             newstring = newstring + str(i)
     return "https://trello.com/b/" + newstring
 
+# This function sets up the table required for News Finder's API.
+def initApiTable():
+    global db
+    query = "CREATE TABLE IF NOT EXISTS `API`( `datanumber` int NOT NULL AUTO_INCREMENT, `username` text NOT NULL, `apikey` text NULL, `token` text NULL, PRIMARY KEY (datanumber)) ENGINE=MEMORY;"
+    db.query(query)
+
+# This function will either return the user's key or return False.
+def lookupApiKey(username):
+    global db
+    query = "SELECT apikey FROM `API` WHERE username = '" + str(username) + "'"
+    cursor = db.query(query)
+    row = cursor.fetchone()
+    if row != None:
+        if row["apikey"] != None and len(row["apikey"]) > 0 and row["apikey"] != "":
+            return row["apikey"]
+        else:
+            return False
+    else:
+        return False
+
+# This function will either return True or False, depending on if the user has API row in API DB.
+def confirmApiUser(username):
+    global db
+    query = "SELECT username FROM `API` WHERE username = '" + str(username) + "'"
+    cursor = db.query(query)
+    row = cursor.fetchone()
+    if row != None:
+        if row["username"] != None:
+            return True
+        else:
+            return False
+    else:
+        return False
+
+# This function adds users to database.
+def createApiUser(username):
+    global db
+    query = "INSERT INTO `API` (`username`) VALUES ('%s')" % (username)
+    db.query(query)
+
+# This function adds the api key to the user's row in the data table.
+def addApiKey(username, key):
+    global db
+    query =  "UPDATE `API` SET apikey='" + str(key) + "' WHERE username='" + str(username) + "'"
+    db.query(query)
+
+# This function generates an API key.
+def createApiKey(username):
+    from binascii import hexlify
+    import os
+    genkey = str(hexlify(os.urandom(32)))
+    global db
+    query = "SELECT apikey FROM `API` WHERE apikey = '" + str(genkey) + "'"
+    cursor = db.query(query)
+    row = cursor.fetchone()
+    if row != None:
+        if row["apikey"] != None:
+            createApiKey(username)
+    else:
+        addApiKey(username, genkey)
+        return genkey
+
+
 
 
 # This should always run to ensure the users table exists in the database.
 initTable()
+initStoryTable()
+initApiTable()
+
