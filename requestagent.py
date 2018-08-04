@@ -6,6 +6,7 @@ from MinimalTrello import *
 from PyToJSON import *
 import os
 import sys
+import json
 app = Flask(__name__)
 
 # My own little version of console.log from JavaScript.
@@ -29,6 +30,8 @@ def login():
         if lookupUser(given_username, given_password) == True:
             session["user"] = given_username
             return redirect(url_for('success'))
+        else:
+            return "Login Error"
     else:
         return render_template("login.html")
 
@@ -106,11 +109,11 @@ def addtrellotoken():
 #---------------------------------------------------
 #-----            API Functions                -----
 #---------------------------------------------------
-@app.route("/API")
+@app.route("/api")
 def API():
     return render_template("api.html")
 
-@app.route("/API/app-key")
+@app.route("/api/app-key")
 def generateapikey():
     user = session["user"]
     if confirmUser(user) == True:
@@ -126,9 +129,74 @@ def generateapikey():
     else:
         redirect(url_for('login'))
         
-        
+@app.route('/api/v1.0/news', methods=['GET'])
+def get_tasks():
+    key = request.args.get('key')
+    if key != None:
+        if checkApiKey(key) == True:
+            convert = Convert()
+            def getStories(source=None):
+                query = "SELECT * FROM `stories` WHERE 1"
+                cursor = db.query(query)
+                stories = []
 
+                for row in cursor:
+                    rowstory = {}
+                    rowstory["headline"] = row["headline"]
+                    rowstory["source"] = row["website"]
+                    rowstory["url"] = row["url"]
+                    stories.append(rowstory)
 
+                if source != None:
+                    if source == "foxnews":
+                        source = "Fox News"
+                    if source == "dailywire":
+                        source = "Daily Wire"
+                    if source == "gatewaypundit":
+                        source = "Gateway Pundit"
+                    if source == "wnd":
+                        source = "WND"
+                    if source == "conservativetribune":
+                        source = "Conservative Tribune"
+                    if source == "foxnewsinsider":
+                        source = "Fox News Insider"
+                    if source == "thehill":
+                        source = "The Hill"
+                    if source == "ijreview":
+                        source = "IJ Review"
+                    if source == "breitbart":
+                        source = "IJ Review"
+                    if source == "freebeacon":
+                        source = "Free Beacon"
+                    if source == "dennismichaellynch":
+                        source = "Dennis Michael Lynch"
+                    if source == "westernjournal":
+                        source = "Western Journal"
+                    if source == "judicialwatch":
+                        source = "Judicial Watch"
+                    if source == "dailycaller":
+                        source = "Daily Caller"
+                    if source == "weaselzippers":
+                        source = "Weasel Zippers"
+                    else:
+                        return "Source not recognized!"
+
+                    nicelist = []
+                    for i in stories:
+                        if i["source"] != source:
+                            nicelist.append(i)
+                    for i in nicelist:
+                        stories.pop(i)
+                    return stories
+
+                else:
+                    return stories
+            stories = getStories()
+            return json.dumps(stories)
+        else:
+            return "Bad API key."
+    else:
+        return "You need to generate an API key"
 
 
 #---------------------------------------------------

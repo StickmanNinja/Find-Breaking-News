@@ -1,16 +1,13 @@
 from NewsFetcher import *
 from functions import *
 
-def uploadStories(x):
-    global conn
-    cursor = conn.cursor()
+def uploadStories(stories):
     import time
+    global db
     for story in stories:
-        query = "INSERT INTO `stories` (website, headline, url) VALUES (%s, %s, %s)"
-        cursor.execute(query, [story["source"], story["headline"], story["url"]])
+        query = "INSERT INTO `stories` (website, headline, url) VALUES (%s, %s, %s)" % (story["source"], story["headline"], story["url"])
+        db.query(query)
         print "Story uploaded."
         time.sleep(1)
-
-setupStoryTable()
 start()
 uploadStories(stories)

@@ -8,12 +8,6 @@ username = os.environ['BreakingNewsUsername']
 dbname = os.environ['BreakingNewsDB']
 hostname = os.environ['SitegroundHostingIP']
 
-conn = pymysql.connect(host=hostname,
-                             user=username,
-                             password=password,
-                             db=dbname,
-                             charset='utf8mb4',
-                             cursorclass=pymysql.cursors.DictCursor)
 
 # The DB class enables you to connect to a MySQL server without experiencing timeout exceptions.
 class DB:
@@ -25,7 +19,8 @@ class DB:
                              password=password,
                              db=dbname,
                              charset='utf8mb4',
-                             cursorclass=pymysql.cursors.DictCursor)
+                             cursorclass=pymysql.cursors.DictCursor,
+                             port=3306)
 
     def query(self, sql):
         try:
@@ -208,11 +203,18 @@ def createApiKey(username):
         addApiKey(username, genkey)
         return genkey
 
-
-
+def checkApiKey(key):
+    global db
+    query = "SELECT apikey FROM `API` WHERE apikey = '" + str(key) + "'"
+    cursor = db.query(query)
+    row = cursor.fetchone()
+    if row != None:
+        return True
+    else:
+        return False
+    
 
 # This should always run to ensure the users table exists in the database.
 initTable()
 initStoryTable()
 initApiTable()
-
