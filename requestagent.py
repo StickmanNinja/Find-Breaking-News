@@ -3,7 +3,6 @@ from __future__ import print_function
 from flask import Flask, render_template, url_for, session, redirect, request
 from functions import *
 from MinimalTrello import *
-from PyToJSON import *
 import os
 import sys
 import json
