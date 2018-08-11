@@ -1,21 +1,218 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Title of the document</title>
-</head>
 
+<html lang="en">
+<head>
+	<title>Control Panel</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sintony:700" rel="stylesheet">
+    <link rel="icon" href="{{url_for('static', filename='icon.png')}}">
+	<style>
+		body, html {
+			width: 100%;
+			height: 100%;
+			background-color: #333;
+			overflow-x: hidden;
+		}
+		.login {
+			width: 500px;
+			height: auto;
+			margin: auto;
+			text-align: center;
+			background-color: #FFFFFF;
+			display: block;
+			border-radius: 15px;
+			text-align: center;
+		}
+		h1 {
+			color: #5d91f7;
+		}
+		input {
+			margin: 20px;
+			width: 80%;
+			height: 50px;
+		}
+		input::placeholder {
+			color: #E9EEA;
+		}
+		.button {
+			width: 30%;
+			border-radius: 15px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			background-color: #5d91f7;
+            box-shadow: 0 2px 0 #3f6f21;
+            background: linear-gradient(to bottom, #61bd4f 0, #5aac44 100%);
+			color: #ffffff;
+			line-height: 30px;
+			font-size: 20px;
+			transition-duration: 1s;
+			text-align: center;
+		}
+		.button:hover {
+			text-decoration: underline;
+			transition-duration: 1s;
+			cursor: pointer;
+		}
+		.logo {
+			margin: auto;
+			width: 60px;
+			height: 60px;
+		}
+		a {
+			color: #ffffff;
+			text-align: center;
+			width: 100%;
+			margin: auto;
+		}
+        a:hover{
+            text-decoration: none;
+            color: #ffffff;
+        }
+		.title {
+			margin-top: 100px;
+		}
+		p {
+            font-size: 10px;
+            text-align: center;
+            margin-bottom: 0px;
+            padding: 15px;
+        }
+		header {
+			height: 80px;
+			width: 100%;
+			background-color: #343a40;
+		}
+		logout {
+            padding-right: 15px;
+            padding-left: 15px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-radius: 5px;
+            background: linear-gradient(to bottom, #61bd4f 0, #5aac44 100%);
+            text-decoration: none;
+            box-shadow: 0 2px 0 #3f6f21;
+            font-family: 'Sintony', sans-serif;
+            float: right;
+			margin-top: 25px;
+			margin-right: 50px;
+			font-size:20px; 
+			color: #FFFFFF;
+			cursor: pointer;
+		}
+        
+        logout:hover {
+            text-decoration:underline;
+        }
+		name {
+			float: left;
+			margin-top: 20px;
+			margin-left: 50px;
+			font-size: 30px;
+			color: #FFFFFF;
+			text-decoration: none;
+            font-family: 'Pacifico', cursive;
+		}
+        name:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+		.img {
+			width: 80%;
+			border-radius: 50px;
+			bottom: 0px;
+		}
+        #holder {
+            background-color: #ffffff;
+            margin: auto;
+        }
+        footer {
+            background-color: #333;
+            color: #ffffff;
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+        }
+        @media only screen and (min-width: 1500px) {
+            #holder {
+                width: 50%;
+                max-width: 2000px;
+                margin: auto;
+            }
+            body {
+                background-color: #333;
+                background-image: url("{{url_for('static', filename='lovely.png')}}");
+            }
+            footer {
+                background-color: transparent;
+            }
+        }
+	</style>
+</head>
+	
 <body>
-    <h1>Welcome, {{user}}!</h1>
-    <p>We hope you enjoy your visit!</p>
-    <br>
-    <br>
-    <a href = "{{ url_for('API') }}"><h2>API</h2></a>
-    <br>
-    <br>
-    <a href = "{{ url_for('trello') }}"><h2>Trello</h2></a>
-    <br>
-    <br>
-    <a href = "{{ url_for('email') }}"><h2>Email</h2></a>
+    <div id = "holder">
+	<header class="bg-dark">
+		<a href = "{{ url_for('home') }}"><name>News Finder</name></a>
+		<logout><a href="{{ url_for('logout') }}">Log Out</a></logout>
+	</header>
+	
+  <div class="container">
+	  <br>
+	  <br>
+      <br>
+	  <br>
+	  <div class="row">
+		  <div class = "col-sm-2"></div>
+		   <div class="col-sm-5">
+			  <h1>Trello</h1>
+				<h3>Connect us with your Trello account for easy story finding.</h3>
+               <a href="{{ url_for('trello') }}">
+				<div class="button">Trello</div>
+               </a>
+		  </div>
+      </div>
+      <br>
+      <br>
+      <div class="row">
+          <div class = "col-sm-2"></div>
+		  <div class="col-sm-5">
+			  <h1>API</h1>
+				<h3>Integrate us into your own projects with our API.</h3>
+              <a href="{{ url_for('API') }}">
+				<div class="button">API</div>
+              </a>
+      </div></div>
+	  <br>
+      <br>
+	  <div class="row">
+		  <div class="col-sm-2"></div>
+			<div class="col-sm-5">
+			  <h1>Email</h1>
+				<h3>Get daily emails to stay in touch with current events.</h3>
+                <a href="{{ url_for('email') }}">
+				<div class="button">Email</div>
+                </a>
+			</div>
+		  <div class="col-sm-2"></div>
+	  </div>
+	</div>
+	<br>
+	  <br>
+	  <br>
+	  <br>
+	  <br>
+        <br>
+	  <br>
+</div>
+    <footer><p>NewsFinder.io - Copyright 2018 - All Rights Reserved</p></footer>
 </body>
 
 </html>

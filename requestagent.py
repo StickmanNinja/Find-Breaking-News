@@ -38,7 +38,7 @@ def login():
 def logout():
     session.clear()
     if session.get("user") is None:
-        return "<h1>You did it, boy!!</h1>"
+        return redirect(url_for('home'))
 
     
 @app.route("/signup", methods = ["GET","POST"])
@@ -77,7 +77,7 @@ def trellotool():
             if i["shortUrl"] == url:
                 targetid = i["id"]
                 Trello(key, usertoken).createList("I love pirates", targetid)
-                return "it worked"
+                return redirect(url_for('success'))
     else:
         return render_template("trellotool.html")
 
@@ -96,7 +96,7 @@ def addtrellotoken():
         token = request.form["trellotoken"]
         if Trello(key, token).checkToken(token) == True:
             addToken(session["user"], token)
-            return "Token Added Successfully!"
+            return render_template("trellotool.html")
         else:
             return "Uh oh. That's not a valid token!"
     else:
@@ -111,6 +111,10 @@ def addtrellotoken():
 @app.route("/api")
 def API():
     return render_template("api.html")
+
+@app.route("/api/docs")
+def docs():
+    return render_template("docs.html")
 
 @app.route("/api/app-key")
 def generateapikey():

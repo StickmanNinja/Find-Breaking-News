@@ -21,13 +21,7 @@
 			height: 100%;
 			background-color: #FFFFFF;
 			overflow-x: hidden;
-            
 		}
-        
-        body {
-            background-color: #333 !important;
-        }
-        
 		.login {
 			width: 500px;
 			height: auto;
@@ -39,18 +33,13 @@
 			text-align: center;
 		}
 		h1 {
-			color: #ffffff;
+			background-color: #5d91f7;
+            color: white;
+            padding-top: 75px;
+            padding-bottom: 75px;
             text-align: center;
-            font-size: 40px;
-            max-width: 500px;
-            margin: auto;
-            font-family: 'Sintony', sans-serif;
+            margin-top: 0px;
 		}
-        h3 {
-            color: #ffffff;
-            text-align: center;
-            margin: auto;
-        }
 		input {
 			margin: 20px;
 			width: 80%;
@@ -85,21 +74,19 @@
 			height: 60px;
 		}
 		a {
-			color: #ffffff;
-			text-decoration: none;
+			color: #5d91f7;
 			text-align: center;
 			margin: auto;
+            text-decoration: none;
 		}
         a:hover {
-            color: #ffffff;
             text-decoration: none;
         }
         
         p {
-            font-size: 10px;
-            text-align: center;
-            margin-bottom: 0px;
-            padding: 15px;
+            font-size: 20px;
+            width: 60%;
+            margin: auto;
         }
 		.title {
 			margin-top: 100px;
@@ -108,6 +95,7 @@
 			height: 80px;
 			width: 100%;
 			background-color: #343a40;
+            margin-bottom: 0px;
 		}
 		logout,name {
 			float: right;
@@ -144,28 +132,6 @@
         name:hover {
             text-decoration: underline;
         }
-        article.header1 {
-            background-image: url("{{url_for('static', filename='blue.png')}}");
-        }
-        h4 {
-            text-align: center;
-            font-size: 36px;
-            font-family: 'Sintony', sans-serif;
-        }
-        img {
-            max-width: 800px;
-            display: block;
-            margin: auto;
-        }
-        article.header3 {
-            background-color: #5aac44;
-        }
-        footer {
-            background-color: #333;
-            color: #ffffff;
-            padding-bottom: 0px;
-            margin-bottom: 0px;
-        }
         #logintop {
             padding-right: 15px;
             padding-left: 15px;
@@ -177,21 +143,29 @@
             box-shadow: 0 2px 0 #3f6f21;
             font-family: 'Sintony', sans-serif;
         }
-        .header2 {
-            background-color: #ffffff;
+        #holder {
         }
-        
-        
-        #babylink {
+        footer {
+            background-color: #333;
+            color: #ffffff;
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+            font-size: 10px;
             text-align: center;
-            margin: auto;
+            margin-bottom: 0px;
+            padding: 15px;
         }
-        
+        h4 {
+            width: 60%;
+            margin: auto;
+            font-size: 30px;
+        }
         @media only screen and (min-width: 1500px) {
             #holder {
                 width: 50%;
                 max-width: 2000px;
                 margin: auto;
+                background-color: #ffffff;
             }
             body {
                 background-color: #333;
@@ -200,81 +174,52 @@
             footer {
                 background-color: transparent;
             }
+            p {
+                margin: auto;
+            }
         }
 	</style>
 </head>
 	
 <body>
-    
     <div id="holder">
 	<header>
-		<name>News Finder</name>
-        <a href = "{{ url_for('login') }}">
-            <login>
-                <div id="logintop">Log In
+		<a href = "{{ url_for('success') }}"><name>News Finder</name></a>
+		<a href = "{{ url_for('logout') }}">
+            <logout>
+                <div id="logintop">Log Out
                 </div>
-            </login></a>
+            </logout></a>
 	</header>
-    <article class="header1">
+    <h1>API 1.0 Documentation</h1>
+    <br>
+    <br>
+        <br>
+        <br>
+        <h4>What Our API Does</h4>
+        <br>
+        <br>
+        <p>By sending a simple request to our server, you will get all of the latest news stories collected from sources like Fox News, The Daily Wire, and Conservative Tribune. <br><br> All responses from us will be in JSON format.</p>
+        <br>
+        <br>
+        <br>
+        <h4>Getting Started</h4>
+        <br>
+        <br>
+        <p>Getting set up on our API is easy. Once you create an account, you will have the option to generate a developer key.<br><br> Developer keys are just a random string of letters and numbers that lets our server know who you are when you make requests - it's like your personal license plate! <br> <br>Upon getting this key, you will be able to access all data from our website by visiting NewsFinder.io//api/v1.0/news and passing your api key as "key".</p>
+        <br>
+        <br>
+        <br>
+        <h4>Sifting Through The Data</h4>
+        <br>
+        <br>
+        <p>Sadly, we don't yet offer a way to filter through the sources we send back to you through the API.<br><br> If you only want 1 source returned, you will have to figure out how to do that yourself.</p><br><br><a href="{{ url_for('signup') }}"><div class="button">Convinced? Let's Begin!</div></a>
         <br>
         <br>
         <br>
         <br>
-        <br>
-        <br>
-        <h1>Find news automatically with News Finder.</h1>
-        <br>
-        <br>
-        <h3>Our custom tools have made story finding easier than ever before.</h3>
-        <br>
-        <br>
-        <a href = "{{ url_for('signup') }}"><div class= "button">Sign Up Today </div></a>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-    </article>
-    <article class="header2">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h4>Directly from sources you can trust:</h4>
-
-        <img src="{{url_for('static', filename='concept.png')}}">
-    
-        <br><br><br><br><br>
-    </article>
-            
-            
-    <article class="header1">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h1>Programmers love us!</h1>
-        <br>
-        <br>
-        <h3>Our custom REST API makes it easy for programmers to build projects.</h3>
-        <br>
-        <br>
-        <a href = "{{ url_for('docs') }}"><div class= "button"> Read The Docs </div></a>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-    </article>
-    
-    <footer><p>NewsFinder.io - Copyright 2018 - All Rights Reserved</p></footer>
-</div>
+    </div>
+    <footer>NewsFinder.io - Copyright 2018 - All Rights Reserved</footer>
 </body>
 
 </html>
