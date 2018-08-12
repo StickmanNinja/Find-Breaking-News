@@ -168,8 +168,8 @@ def TheHill():
     r = requests.get(hill)
     data = r.text
     soup = BeautifulSoup(data, 'lxml')
-    for story in soup.find_all('h2'):
-        headline = story.find('a').text
+    for story in soup.find_all('div', class_="top-story-item"):
+        headline = story.find('a')["title"]
         url = 'http://thehill.com' + story.find('a', href=True)['href']
         d = {"source": source, 'headline': headline, 'url': url}
         thehilllist.append(d)
