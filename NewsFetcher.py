@@ -568,7 +568,7 @@ def getshares(linklist):
 # This function appends all scraped data to the global stories list.
 def connectNewsLists():
     global stories
-    data = [foxnewslist, dailywirelist, gatewaypunditlist, wndlist, ctlist, insiderfoxlist, thehilllist, ijrlist, breitbartlist, freebeaconlist, westernjournallist, judicialwatchlist, dailycallerlist, weaselzipperslist, madworldlist, redstatelist, ntknetworklist, chicksontherightlist, seanhannitylist, bizpacreviewlist, washingtonexaminerlist, washingtontimeslist, lifezettelist, rightscooplist, antimedialist, deadlinelis]
+    data = [foxnewslist, dailywirelist, gatewaypunditlist, wndlist, ctlist, insiderfoxlist, thehilllist, ijrlist, breitbartlist, freebeaconlist, westernjournallist, judicialwatchlist, dailycallerlist, weaselzipperslist, madworldlist, redstatelist, ntknetworklist, chicksontherightlist, seanhannitylist, bizpacreviewlist, washingtonexaminerlist, washingtontimeslist, lifezettelist, rightscooplist, antimedialist, deadlinelist]
     length = len(data)
     for site in range(0, length):
         length2 = len(data[site])
