@@ -402,7 +402,7 @@ def ChicksOnTheRight():
 
 # This function searches FederalistPapers for stories.
 def FederalistPapers():
-    source = "Red State Watcher"
+    source = "Federalist Papers"
     global federalistpaperslist
     federalistpaperslist = []
     federalistpapers = 'https://thefederalistpapers.org/'
