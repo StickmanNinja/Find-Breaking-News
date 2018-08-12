@@ -145,17 +145,16 @@ def InsiderFoxNews():
     fox = 'http://insider.foxnews.com/'
     options = Options()
     options.set_headless(headless=True)
-    driver = webdriver.Firefox(firefox_options=options,
-                               executable_path=r'C:\Users\Seth\Documents\geckodriver'
-                               )
+    driver = webdriver.Firefox(firefox_options=options, executable_path='C:\\Users\\Seth\\Documents\\geckodriver\\geckodriver.exe')
     driver.get(fox)
     html = driver.page_source
     soup = BeautifulSoup(html, 'lxml')
     for i in soup.find_all('h2')[0:40]:
-        headline = i.find('a').text
-        url = i.find('a', href=True)['href']
-        d = {"source": source, 'headline': headline, 'url': url}
-        insiderfoxlist.append(d)
+        if i.find("a") != None:
+            headline = i.find('a').text
+            url = i.find('a', href=True)['href']
+            d = {"source": source, 'headline': headline, 'url': url}
+            insiderfoxlist.append(d)
     driver.quit()
 
 
