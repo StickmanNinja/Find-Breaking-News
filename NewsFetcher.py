@@ -328,6 +328,23 @@ def WeaselZippers():
         d = {"source": source, 'headline': headline, 'url': url}
         weaselzipperslist.append(d)
 
+# This function searches Mad World News for stories.
+def MadWorldNews():
+    source = "Mad World News"
+    global madworldlist
+    madworldlist = []
+    madworld = 'https://madworldnews.com/'
+    r = requests.get(madworld)
+    data = r.text
+    soup = BeautifulSoup(data, "lxml")
+    for story in soup.find_all("article", class_="post"):
+        if story.find("a"):
+            url = story.find("a", href=True)["href"]
+            headline = story.find("a", href=True)["title"]
+            d = {"source": source, 'headline': headline, 'url': url}
+            madworldlist.append(d)
+
+
 # This function gets as many share-counts from Facebook's API as it safely can.
 def getshares(linklist):
     global stories
@@ -339,7 +356,7 @@ def getshares(linklist):
 # This function appends all scraped data to the global stories list.
 def connectNewsLists():
     global stories
-    data = [foxnewslist, dailywirelist, gatewaypunditlist, wndlist, ctlist, insiderfoxlist, thehilllist, ijrlist, breitbartlist, freebeaconlist, westernjournallist, judicialwatchlist, dailycallerlist, weaselzipperslist]
+    data = [foxnewslist, dailywirelist, gatewaypunditlist, wndlist, ctlist, insiderfoxlist, thehilllist, ijrlist, breitbartlist, freebeaconlist, westernjournallist, judicialwatchlist, dailycallerlist, weaselzipperslist, madworldlist]
     length = len(data)
     for site in range(0, length):
         length2 = len(data[site])
@@ -348,7 +365,7 @@ def connectNewsLists():
     print "finished!"
                 
 # The 'scrapingfunctions' list contains all functions that search for news stories.
-scrapingfunctions = [scrapeFoxNews, scrapeDailyWire, scrapeTheGatewayPundit, scrapeWND, CT, InsiderFoxNews, TheHill, ijr, Breitbart, FreeBeacon, Dennis, WesternJournal, JudicialWatch, DailyCaller, WeaselZippers]
+scrapingfunctions = [scrapeFoxNews, scrapeDailyWire, scrapeTheGatewayPundit, scrapeWND, CT, InsiderFoxNews, TheHill, ijr, Breitbart, FreeBeacon, Dennis, WesternJournal, JudicialWatch, DailyCaller, WeaselZippers, MadWorldnews]
 
 # This function prints all items from the global 'stories' list.
 def printStories():
