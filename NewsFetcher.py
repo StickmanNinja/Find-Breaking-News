@@ -192,7 +192,7 @@ def ijr():
         if story.find("h2") != None and story.find("a", href=True) != None:
             headline = story.find("h2").text
             source = ijr + story.find("a", href=True)["href"]
-            ijrlist.append({"headline" : headline, "source" : source})
+            ijrlist.append({"source" : "IJ Review" ,"headline" : headline, "url" : source})
     driver.quit()
     listofindexes = []
     # Check for duplicates in IJR stories.
@@ -251,10 +251,9 @@ def Dennis():
     response = urllib.request.urlopen(request)
     data = response.read()
     soup = BeautifulSoup(data, 'lxml')
-    soup = soup.find("div", class_="trending-stories")
-    for story in soup.find_all("article", class_="latestPost excerpt grid-2"):
+    for story in soup.find_all("div", class_="td_module_14 td_module_wrap td-animation-stack"):
         headline = story.find("a")["title"]
-        url  = story.find("a", href=True)["href"]
+        url = story.find("a", href=True)["href"]
         d = {"source": source, 'headline': headline, 'url': url}
         dennislist.append(d)
 
