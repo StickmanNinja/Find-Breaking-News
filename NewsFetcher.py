@@ -473,6 +473,26 @@ def WashingtonExaminer():
             washingtonexaminerlist.append(d)
     driver.quit()
 
+# This function searches Washington Times for stories.
+def WashingtonTimes():
+    source = "Washington Times"
+    global washingtontimeslist
+    washingtontimeslist = []
+    link = "https://www.washingtontimes.com/news/politics/"
+    options = Options()
+    options.set_headless(headless=True)
+    driver = webdriver.Firefox(firefox_options=options, executable_path='C:\\Users\\Seth\\Documents\\geckodriver\\geckodriver.exe')
+    driver.get(link)
+    html = driver.page_source
+    soup = BeautifulSoup(html, 'lxml')
+    for story in soup.find_all("article", class_="story"):
+        if story.find("h2") != None:
+            headline = story.find("h2").find("a").text
+            url = "https://www.washingtonexaminer.com" + story.find("h2").find("a", href=True)["href"]
+            d = {"source": source, 'headline': headline, 'url': url}
+            washingtontimeslist.append(d)
+    driver.quit()
+
 
 # This function gets as many share-counts from Facebook's API as it safely can.
 def getshares(linklist):
@@ -485,7 +505,7 @@ def getshares(linklist):
 # This function appends all scraped data to the global stories list.
 def connectNewsLists():
     global stories
-    data = [foxnewslist, dailywirelist, gatewaypunditlist, wndlist, ctlist, insiderfoxlist, thehilllist, ijrlist, breitbartlist, freebeaconlist, westernjournallist, judicialwatchlist, dailycallerlist, weaselzipperslist, madworldlist, redstatelist, ntknetworklist, chicksontherightlist, seanhannitylist, bizpacreviewlist, washingtonexaminerlist]
+    data = [foxnewslist, dailywirelist, gatewaypunditlist, wndlist, ctlist, insiderfoxlist, thehilllist, ijrlist, breitbartlist, freebeaconlist, westernjournallist, judicialwatchlist, dailycallerlist, weaselzipperslist, madworldlist, redstatelist, ntknetworklist, chicksontherightlist, seanhannitylist, bizpacreviewlist, washingtonexaminerlist, washingtontimeslist]
     length = len(data)
     for site in range(0, length):
         length2 = len(data[site])
@@ -494,7 +514,7 @@ def connectNewsLists():
     print "finished!"
                 
 # The 'scrapingfunctions' list contains all functions that search for news stories.
-scrapingfunctions = [scrapeFoxNews, scrapeDailyWire, scrapeTheGatewayPundit, scrapeWND, CT, InsiderFoxNews, TheHill, ijr, Breitbart, FreeBeacon, Dennis, WesternJournal, JudicialWatch, DailyCaller, WeaselZippers, MadWorldnews, RedStateWatcher, NTKNetwork, ChicksOnTheRight, FederalistPapers, SeanHannity, BizPacReview, WashingtonExaminer]
+scrapingfunctions = [scrapeFoxNews, scrapeDailyWire, scrapeTheGatewayPundit, scrapeWND, CT, InsiderFoxNews, TheHill, ijr, Breitbart, FreeBeacon, Dennis, WesternJournal, JudicialWatch, DailyCaller, WeaselZippers, MadWorldnews, RedStateWatcher, NTKNetwork, ChicksOnTheRight, FederalistPapers, SeanHannity, BizPacReview, WashingtonExaminer, WashingtonTimes]
 
 # This function prints all items from the global 'stories' list.
 def printStories():
