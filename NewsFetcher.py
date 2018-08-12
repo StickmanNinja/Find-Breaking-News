@@ -437,7 +437,21 @@ def SeanHannity():
             seanhannitylist.append(d)
     driver.quit()
 
-
+# This function searches Biz Pac Review for stories.
+def BizPacReview():
+    source = "Biz Pac Review"
+    global bizpacreviewlist
+    bizpacreviewlist = []
+    link = "https://www.bizpacreview.com/#home"
+    r = requests.get(link)
+    data = r.text
+    soup = BeautifulSoup(data, "lxml")
+    for story in soup.find_all("div", class_="bordered-box")[0:10]:
+        if story.find("h4") != None and story.find("a",href=True) != None:
+            headline = story.find("h4").text
+            url = story.find("a",href=True)['href']
+            d = {"source": source, 'headline': headline, 'url': url}
+            bizpacreviewlist.append(d)
 
 # This function gets as many share-counts from Facebook's API as it safely can.
 def getshares(linklist):
@@ -450,7 +464,7 @@ def getshares(linklist):
 # This function appends all scraped data to the global stories list.
 def connectNewsLists():
     global stories
-    data = [foxnewslist, dailywirelist, gatewaypunditlist, wndlist, ctlist, insiderfoxlist, thehilllist, ijrlist, breitbartlist, freebeaconlist, westernjournallist, judicialwatchlist, dailycallerlist, weaselzipperslist, madworldlist, redstatelist, ntknetworklist, chicksontherightlist, seanhannitylist]
+    data = [foxnewslist, dailywirelist, gatewaypunditlist, wndlist, ctlist, insiderfoxlist, thehilllist, ijrlist, breitbartlist, freebeaconlist, westernjournallist, judicialwatchlist, dailycallerlist, weaselzipperslist, madworldlist, redstatelist, ntknetworklist, chicksontherightlist, seanhannitylist, bizpacreviewlist]
     length = len(data)
     for site in range(0, length):
         length2 = len(data[site])
@@ -459,7 +473,7 @@ def connectNewsLists():
     print "finished!"
                 
 # The 'scrapingfunctions' list contains all functions that search for news stories.
-scrapingfunctions = [scrapeFoxNews, scrapeDailyWire, scrapeTheGatewayPundit, scrapeWND, CT, InsiderFoxNews, TheHill, ijr, Breitbart, FreeBeacon, Dennis, WesternJournal, JudicialWatch, DailyCaller, WeaselZippers, MadWorldnews, RedStateWatcher, NTKNetwork, ChicksOnTheRight, FederalistPapers, SeanHannity]
+scrapingfunctions = [scrapeFoxNews, scrapeDailyWire, scrapeTheGatewayPundit, scrapeWND, CT, InsiderFoxNews, TheHill, ijr, Breitbart, FreeBeacon, Dennis, WesternJournal, JudicialWatch, DailyCaller, WeaselZippers, MadWorldnews, RedStateWatcher, NTKNetwork, ChicksOnTheRight, FederalistPapers, SeanHannity, BizPacReview]
 
 # This function prints all items from the global 'stories' list.
 def printStories():
