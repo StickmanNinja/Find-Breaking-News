@@ -66,17 +66,22 @@ def scrapeDailyWire():
     global dailywirelist
     dailywirelist = []
     dailywire = 'https://www.dailywire.com/'
-    result = urllib.request.urlopen(dailywire)
-    data = response.read()
-    soup = BeautifulSoup(data, 'lxml')
+    options = Options()
+    options.set_headless(headless=True)
+    driver = webdriver.Firefox(firefox_options=options, executable_path='C:\\Users\\Seth\\Documents\\geckodriver\\geckodriver.exe')
+    driver.get(dailywire)
+    html = driver.page_source
+    soup = BeautifulSoup(html, 'lxml')
     for h3 in soup.find_all('article',
                             class_='article-teaser f-deflate-1-s fx ai-c mb-3-s mb-4-ns'
                             ):
-        blah = h3.find('a', text=True)
-        headline = blah.text
-        url = 'https://www.dailywire.com' + blah['href']
-        d = {"source": source, 'headline': headline, 'url': url}
-        dailywirelist.append(d)
+        if h3.find("a", text=True) != None:
+            blah = h3.find('a', text=True)
+            headline = blah.text
+            url = 'https://www.dailywire.com' + blah['href']
+            d = {"source": source, 'headline': headline, 'url': url}
+            dailywirelist.append(d)
+    driver.quit()
 
 
 # A function that scrapes The Gateway Pundit.
