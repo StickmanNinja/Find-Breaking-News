@@ -176,26 +176,34 @@ def TheHill():
 
 #This function scrapes IJ Review.
 def ijr():
-    source = "IJ Review"
-    global soup
+    import os
     global ijrlist
+    os.environ["PATH"] += os.pathsep + 'C:\\Users\\Seth\\Documents\\geckodriver\\geckodriver.exe'
+    source = "IJ Review"
     ijrlist = []
     ijr = 'https://ijr.com/'
     options = Options()
     options.set_headless(headless=True)
-    driver = webdriver.Firefox(firefox_options=options,
-                               executable_path=r'C:\Users\Seth\Documents\geckodriver'
-                               )
+    driver = webdriver.Firefox(firefox_options=options, executable_path='C:\\Users\\Seth\\Documents\\geckodriver\\geckodriver.exe')
     driver.get(ijr)
     html = driver.page_source
     soup = BeautifulSoup(html, 'lxml')
-    soup = soup.find('div', class_='infinite-scroll-component')
-    for story in soup.find_all('a', attrs={'rel': 'post'}, href=True):
-        headline = story.text
-        url = "https://ijr.com" + story['href']
-        d = {"source": source, 'headline': headline, 'url': url}
-        ijrlist.append(d)
+    for story in soup.find_all('div', class_='col-12'):
+        if story.find("h2") != None and story.find("a", href=True) != None:
+            headline = story.find("h2").text
+            source = ijr + story.find("a", href=True)["href"]
+            ijrlist.append({"headline" : headline, "source" : source})
     driver.quit()
+    listofindexes = []
+    # Check for duplicates in IJR stories.
+    for a in range(0, len(ijrlist)):
+        if a != len(stories):
+            for b in range(a+1, len(ijrlist)):
+                if ijrlist[a]["headline"] in ijrlist[b]["headline"]:
+                    listofindexes.append(a)
+
+    for i in sorted(listofindexes, reverse=True):
+        ijrlist.pop(i)  
 
 # This function scrapes Breitbart's website.
 def Breitbart():

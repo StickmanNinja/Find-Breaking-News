@@ -1,28 +1,35 @@
-1529367475408	geckodriver	INFO	geckodriver 0.20.0
-1529367475422	geckodriver	INFO	Listening on 127.0.0.1:56775
-1529367476425	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-profile" "/var/folders/24/43sdwrg509z6q0cc7dx_v4j00000gn/T/rust_mozprofile.V4NaNRWXoVcv"
+1534040729543	geckodriver	INFO	geckodriver 0.21.0
+1534040729560	geckodriver	INFO	Listening on 127.0.0.1:57573
+1534040732543	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\Seth\\AppData\\Local\\Temp\\rust_mozprofile.g3Gcre42AZEq"
 *** You are running in headless mode.
-1529367477502	Marionette	INFO	Enabled via --marionette
-2018-06-18 19:17:58.804 plugin-container[12606:590798] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x873f, name = 'com.apple.tsm.portname'
-See /usr/include/servers/bootstrap_defs.h for the error codes.
-1529367479440	Marionette	INFO	Listening on port 56786
-1529367479588	Marionette	WARN	TLS certificate errors will be ignored for this session
-2018-06-18 19:17:59.970 plugin-container[12607:590878] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x853f, name = 'com.apple.tsm.portname'
-See /usr/include/servers/bootstrap_defs.h for the error codes.
+1534040734635	Marionette	INFO	Listening on port 57582
+1534040734689	Marionette	WARN	TLS certificate errors will be ignored for this session
+Unable to read VR Path Registry from C:\Users\Seth\AppData\Local\openvr\openvrpaths.vrpath
+[Child 9024, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1534040762974	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+1534040762982	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+Unable to read VR Path Registry from C:\Users\Seth\AppData\Local\openvr\openvrpaths.vrpath
+[Parent 5092, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x49000F,name=PHttpChannel::Msg___delete__) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x550027,name=PNecko::Msg_RemoveRequestContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x2D00B0,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x900006,name=PWebSocket::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+[Parent 5092, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\Seth\AppData\Local\openvr\openvrpaths.vrpath
+[Child 7812, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
 *** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
-1529367498347	geckodriver::marionette	ERROR	Failed to stop browser process
-1529367635518	geckodriver	INFO	geckodriver 0.20.0
-1529367635526	geckodriver	INFO	Listening on 127.0.0.1:57675
-1529367636540	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-profile" "/var/folders/24/43sdwrg509z6q0cc7dx_v4j00000gn/T/rust_mozprofile.HsB1Bl2JTflT"
-*** You are running in headless mode.
-1529367637190	Marionette	INFO	Enabled via --marionette
-2018-06-18 19:20:38.250 plugin-container[12613:592222] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x843f, name = 'com.apple.tsm.portname'
-See /usr/include/servers/bootstrap_defs.h for the error codes.
-1529367638762	Marionette	INFO	Listening on port 57686
-1529367638812	Marionette	WARN	TLS certificate errors will be ignored for this session
-2018-06-18 19:20:39.228 plugin-container[12614:592291] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x773f, name = 'com.apple.tsm.portname'
-See /usr/include/servers/bootstrap_defs.h for the error codes.
-*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+ge notification. Ignoring timer registration for id: telemetry_modules_ping
 1529367670350	geckodriver::marionette	ERROR	Failed to stop browser process
 1529367781522	geckodriver	INFO	geckodriver 0.20.0
 1529367781529	geckodriver	INFO	Listening on 127.0.0.1:58558
