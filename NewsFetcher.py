@@ -509,6 +509,22 @@ def LifeZette():
             d = {"source": source, 'headline': headline, 'url': url}
             lifezettelist.append(d)
 
+# This function searches The Right Scoop for stories.
+def TheRightScoop():
+    source = "The Right Scoop"
+    global rightscooplist
+    rightscooplist = []
+    link = "http://therightscoop.com/"
+    r = requests.get(link)
+    data = r.text
+    soup = BeautifulSoup(data, "lxml")
+    for story in soup.find_all("article", class_="post")[0:7]:
+        if story.find("h2") != None:
+            headline = story.find("h2").find("a").text
+            url = story.find("h2").find("a", href=True)["href"]
+            d = {"source": source, 'headline': headline, 'url': url}
+            rightscooplist.append(d)
+
 # This function gets as many share-counts from Facebook's API as it safely can.
 def getshares(linklist):
     global stories
@@ -520,7 +536,7 @@ def getshares(linklist):
 # This function appends all scraped data to the global stories list.
 def connectNewsLists():
     global stories
-    data = [foxnewslist, dailywirelist, gatewaypunditlist, wndlist, ctlist, insiderfoxlist, thehilllist, ijrlist, breitbartlist, freebeaconlist, westernjournallist, judicialwatchlist, dailycallerlist, weaselzipperslist, madworldlist, redstatelist, ntknetworklist, chicksontherightlist, seanhannitylist, bizpacreviewlist, washingtonexaminerlist, washingtontimeslist, lifezettelist]
+    data = [foxnewslist, dailywirelist, gatewaypunditlist, wndlist, ctlist, insiderfoxlist, thehilllist, ijrlist, breitbartlist, freebeaconlist, westernjournallist, judicialwatchlist, dailycallerlist, weaselzipperslist, madworldlist, redstatelist, ntknetworklist, chicksontherightlist, seanhannitylist, bizpacreviewlist, washingtonexaminerlist, washingtontimeslist, lifezettelist, rightscooplist]
     length = len(data)
     for site in range(0, length):
         length2 = len(data[site])
@@ -529,7 +545,7 @@ def connectNewsLists():
     print "finished!"
                 
 # The 'scrapingfunctions' list contains all functions that search for news stories.
-scrapingfunctions = [scrapeFoxNews, scrapeDailyWire, scrapeTheGatewayPundit, scrapeWND, CT, InsiderFoxNews, TheHill, ijr, Breitbart, FreeBeacon, Dennis, WesternJournal, JudicialWatch, DailyCaller, WeaselZippers, MadWorldnews, RedStateWatcher, NTKNetwork, ChicksOnTheRight, FederalistPapers, SeanHannity, BizPacReview, WashingtonExaminer, WashingtonTimes, LifeZette]
+scrapingfunctions = [scrapeFoxNews, scrapeDailyWire, scrapeTheGatewayPundit, scrapeWND, CT, InsiderFoxNews, TheHill, ijr, Breitbart, FreeBeacon, Dennis, WesternJournal, JudicialWatch, DailyCaller, WeaselZippers, MadWorldnews, RedStateWatcher, NTKNetwork, ChicksOnTheRight, FederalistPapers, SeanHannity, BizPacReview, WashingtonExaminer, WashingtonTimes, LifeZette, TheRightScoop]
 
 # This function prints all items from the global 'stories' list.
 def printStories():
