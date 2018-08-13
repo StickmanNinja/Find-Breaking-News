@@ -89,7 +89,7 @@
 		header {
 			height: 80px;
 			width: 100%;
-			background-color: #343a40;
+			background: linear-gradient(to bottom right, #3170e2, #5D8DE3);
 		}
 		logout {
             padding-right: 15px;
@@ -133,13 +133,27 @@
         #holder {
             background-color: #ffffff;
             margin: auto;
+            position: relative;
         }
         footer {
             background-color: #333;
             color: #ffffff;
             padding-bottom: 0px;
             margin-bottom: 0px;
+            position: relative;
         }
+
+        #particles-js {
+              position: fixed;
+              width: 100%;
+              height: 100%;
+              z-index: 0;
+              top: 0px;
+              left: 0px;
+              background-color: #202020;
+              display: inline;
+        }
+
         @media only screen and (min-width: 1500px) {
             #holder {
                 width: 50%;
@@ -158,6 +172,14 @@
 </head>
 	
 <body>
+	<div id = "particles-js"></div>
+    <script type="text/javascript" src="{{ url_for('static', filename='particles.min.js') }}"></script>
+    <script>
+        particlesJS.load("particles-js", "{{ url_for('static', filename='particles.json') }}",
+        function() {
+            console.log("particles.json loaded...")
+        });
+    </script>
     <div id = "holder">
 	<header class="bg-dark">
 		<a href = "{{ url_for('home') }}"><name>News Finder</name></a>
