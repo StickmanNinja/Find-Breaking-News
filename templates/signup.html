@@ -14,6 +14,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sintony:700" rel="stylesheet">
+    <link rel="icon" href="{{url_for('static', filename='icon.png')}}">
 	<style>
 		body, html {
 			width: 100%;
@@ -92,10 +93,34 @@
 			text-decoration: none;
             font-family: 'Pacifico', cursive;
 		}
+
+		#particles-js {
+              position: fixed;
+              width: 100%;
+              height: 100%;
+              z-index: 0;
+              top: 0px;
+              left: 0px;
+              background-color: #202020;
+              display: inline;
+        }
+
+        form {
+            position: relative;
+        }
 	</style>
 </head>
 	
 <body>
+
+	<div id = "particles-js"></div>
+    <script type="text/javascript" src="{{ url_for('static', filename='particles.min.js') }}"></script>
+    <script>
+        particlesJS.load("particles-js", "{{ url_for('static', filename='particles.json') }}",
+        function() {
+            console.log("particles.json loaded...")
+        });
+    </script>
     
     <form action = "{{ url_for('signup') }}" enctype="multipart/form-data" method="post">
         <h1 class = "title"><name>News Finder</name></h1>
