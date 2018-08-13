@@ -15,6 +15,8 @@
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sintony:700" rel="stylesheet">
     <link rel="icon" href="{{url_for('static', filename='icon.png')}}">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+
 	<style>
 		body, html {
 			width: 100%;
@@ -22,12 +24,7 @@
 			background-color: #FFFFFF;
 			overflow-x: hidden;
             
-		}
-        
-        body {
-            background-color: #333 !important;
-        }
-        
+		}        
 		.login {
 			width: 500px;
 			height: auto;
@@ -44,12 +41,14 @@
             font-size: 40px;
             max-width: 500px;
             margin: auto;
-            font-family: 'Sintony', sans-serif;
+            font-family: 'Poppins', sans-serif;
 		}
         h3 {
             color: #ffffff;
             text-align: center;
             margin: auto;
+            font-family: 'Sintony', sans-serif;
+            font-size: 20px;
         }
 		input {
 			margin: 20px;
@@ -107,7 +106,8 @@
 		header {
 			height: 80px;
 			width: 100%;
-			background-color: #343a40;
+            background-color: transparent;
+            display: inline;
 		}
 		logout,name {
 			float: right;
@@ -145,12 +145,12 @@
             text-decoration: underline;
         }
         article.header1 {
-            background-image: url("{{url_for('static', filename='blue.png')}}");
+            background: linear-gradient(to bottom right, #3170e2, #5D8DE3);
         }
         h4 {
             text-align: center;
             font-size: 36px;
-            font-family: 'Sintony', sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
         img {
             max-width: 800px;
@@ -186,16 +186,41 @@
             text-align: center;
             margin: auto;
         }
+
+        #particles-js {
+              position: fixed;
+              width: 100%;
+              height: 100%;
+              z-index: 0;
+              top: 0px;
+              left: 0px;
+              background-color: #202020;
+              display: inline;
+        }
         
+        #holder {
+            position: relative;
+        }
+
+         @media only screen and (max-width: 1500px) {
+            #particles-js {
+                display: none;
+            }
+
+            #space {
+                display: none;
+            }
+
+            body {
+                background-color: #202020;
+            }
+         }
+
         @media only screen and (min-width: 1500px) {
             #holder {
                 width: 50%;
                 max-width: 2000px;
                 margin: auto;
-            }
-            body {
-                background-color: #333;
-                background-image: url("{{url_for('static', filename='lovely.png')}}");
             }
             footer {
                 background-color: transparent;
@@ -205,7 +230,15 @@
 </head>
 	
 <body>
-    
+    <div id = "particles-js"></div>
+    <script type="text/javascript" src="{{ url_for('static', filename='particles.min.js') }}"></script>
+    <script>
+        particlesJS.load("particles-js", "{{ url_for('static', filename='particles.json') }}",
+        function() {
+            console.log("particles.json loaded...")
+        });
+    </script>
+    <br id = "space">
     <div id="holder">
 	<header>
 		<name>News Finder</name>
@@ -222,13 +255,14 @@
         <br>
         <br>
         <br>
-        <h1>Find news automatically with News Finder.</h1>
+        <br>
+        <h1>Automatic News.</h1>
         <br>
         <br>
-        <h3>Our custom tools have made story finding easier than ever before.</h3>
+        <h3>Our news finding algorithms will save you countless hours each day.</h3>
         <br>
         <br>
-        <a href = "{{ url_for('signup') }}"><div class= "button">Sign Up Today </div></a>
+        <a href = "{{ url_for('signup') }}"><div class= "button">Sign Up Now</div></a>
         <br>
         <br>
         <br>
@@ -242,7 +276,7 @@
         <br>
         <br>
         <br>
-        <h4>Directly from sources you can trust:</h4>
+        <h4>An Interface You Can Understand:</h4>
 
         <img src="{{url_for('static', filename='concept.png')}}">
     
