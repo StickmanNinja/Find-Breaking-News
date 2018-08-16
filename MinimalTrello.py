@@ -71,6 +71,7 @@ class Trello(object):
             if i != 0:
                 query[str(varname(i, locals()))]
         response = requests.request("POST", url, params=query)
+        print response
         jsonresponse = json.loads(response.text)
         print jsonresponse
         return jsonresponse

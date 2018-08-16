@@ -212,9 +212,64 @@ def checkApiKey(key):
         return True
     else:
         return False
-    
 
-# This should always run to ensure the users table exists in the database.
-initTable()
-initStoryTable()
-initApiTable()
+# Returns false if no stories can be found - or if no such given source exists.
+def getStories(source=0):
+    if source != 0:
+        if source == "foxnews":
+            source = "Fox News"
+        if source == "dailywire":
+            source = "Daily Wire"
+        if source == "gatewaypundit":
+            source = "Gateway Pundit"
+        if source == "wnd":
+            source = "WND"
+        if source == "conservativetribune":
+            source = "Conservative Tribune"
+        if source == "foxnewsinsider":
+            source = "Fox News Insider"
+        if source == "thehill":
+            source = "The Hill"
+        if source == "ijreview":
+            source = "IJ Review"
+        if source == "breitbart":
+            source = "breitbart"
+        if source == "freebeacon":
+            source = "Free Beacon"
+        if source == "dennismichaellynch":
+            source = "Dennis Michael Lynch"
+        if source == "westernjournal":
+            source = "Western Journal"
+        if source == "judicialwatch":
+            source = "Judicial Watch"
+        if source == "dailycaller":
+            source = "Daily Caller"
+        if source == "weaselzippers":
+            source = "Weasel Zippers"
+        query = "SELECT * FROM `stories` WHERE website = '%s'" % (source)
+        cursor = db.query(query)
+        stories = []
+        for row in cursor:
+            rowstory = {}
+            rowstory["headline"] = row["headline"]
+            rowstory["source"] = row["website"]
+            rowstory["url"] = row["url"]
+            stories.append(rowstory)
+        if len(stories) > 0:
+            return stories
+        else:
+            return False
+    else:
+        query = "SELECT * FROM `stories` WHERE 1"
+        cursor = db.query(query)
+        stories = []
+        for row in cursor:
+            rowstory = {}
+            rowstory["headline"] = row["headline"]
+            rowstory["source"] = row["website"]
+            rowstory["url"] = row["url"]
+            stories.append(rowstory)
+        if len(stories) > 0:
+            return stories
+        else:
+            return False

@@ -2,6 +2,12 @@ from __future__ import print_function
 # Importing flask.
 from flask import Flask, render_template, url_for, session, redirect, request
 from functions import *
+
+# This should always run to ensure the users table exists in the database.
+initTable()
+initStoryTable()
+initApiTable()
+
 from MinimalTrello import *
 import os
 import sys
@@ -76,7 +82,18 @@ def trellotool():
         for i in Trello(key, usertoken).getBoards(userid):
             if i["shortUrl"] == url:
                 targetid = i["id"]
-                Trello(key, usertoken).createList("I love pirates", targetid)
+                stories = getStories()
+                filtered = {}
+                for story in stories:
+                    if story["source"] in filtered:
+                        filtered[story["source"]].append(story)
+                    else:
+                        filtered[story["source"]] = []
+                        filtered[story["source"]].append(story)
+                for sourcename in filtered.keys():
+                    newlist = Trello(key, usertoken).createList(sourcename, targetid)["id"]
+                    for story in filtered[sourcename]:
+                        Trello(key, usertoken).addCard(newlist, name=story["headline"], desc=story["url"])
                 return redirect(url_for('success'))
     else:
         return render_template("trellotool.html")
@@ -201,6 +218,21 @@ def get_tasks():
     else:
         return "You need to generate an API key"
 
+
+
+@app.route('/getstories')
+def getstories():
+    stories = getStories()
+    filtered = {}
+    for story in stories:
+        if story["source"] in filtered:
+            filtered[story["source"]].append(story)
+        else:
+            filtered[story["source"]] = []
+            filtered[story["source"]].append(story)
+    return "lol"
+
+        
 
 #---------------------------------------------------
 #-----            Email Function               -----
