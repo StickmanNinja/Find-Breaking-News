@@ -12,6 +12,7 @@ hostname = os.environ['SitegroundHostingIP']
 # The DB class enables you to connect to a MySQL server without experiencing timeout exceptions.
 class DB:
     conn = None
+    cursor = None
 
     def connect(self):
         self.conn = pymysql.connect(host=hostname,
@@ -22,14 +23,22 @@ class DB:
                              cursorclass=pymysql.cursors.DictCursor,
                              port=3306)
 
-    def query(self, sql):
+    def query(self, sql, para=0):
         try:
-            cursor = self.conn.cursor()
-            cursor.execute(sql)
+            if para!= 0:
+                cursor = self.conn.cursor()
+                cursor.execute(sql, para)
+            else:
+                cursor = self.conn.cursor()
+                cursor.execute(sql)
         except:
             self.connect()
-            cursor = self.conn.cursor()
-            cursor.execute(sql)
+            if para != 0:
+                cursor = self.conn.cursor()
+                cursor.execute(sql, para)
+            else:
+                cursor = self.conn.cursor()
+                cursor.execute(sql)
         return cursor
 
 
@@ -45,8 +54,8 @@ def initTable():
 # This function adds users to database.
 def createUser(username, password):
     global db
-    query = "INSERT INTO `users` (`username`,`password`) VALUES ('%s', '%s')" % (username, password)
-    db.query(query)
+    query = "INSERT INTO `users` (`username`,`password`) VALUES (%s, %s)"
+    db.query(query, para=(username, password))
 
 # This function checks to see if username is available. If so, it returns True.
 def checkUser(username):
@@ -76,7 +85,7 @@ def checkString(password):
 # This function looks for the username and password combo in database.
 def lookupUser(username, password):
     global db
-    query = "SELECT password FROM `users` WHERE username = '" + str(username) + "'"
+    query = "SELECT password FROM `users` WHERE username = %s"
     cursor = db.query(query)
     for row in cursor:
         if row["password"] == password:
@@ -87,8 +96,8 @@ def lookupUser(username, password):
 # This function confirms that a given username exists.
 def confirmUser(username):
     global db
-    query = "SELECT username FROM `users` WHERE username = '" + str(username) + "'"
-    cursor = db.query(query)
+    query = "SELECT username FROM `users` WHERE username = %s"
+    cursor = db.query(query, para=str(username))
     for row in cursor:
         if row["username"] != None:
             return True
@@ -99,8 +108,8 @@ def confirmUser(username):
 # This function helps you find a user's Trello token by username.
 def lookupToken(username):
     global db
-    query = "SELECT trellotoken FROM `users` WHERE username = '" + str(username) + "'"
-    cursor = db.query(query)
+    query = "SELECT trellotoken FROM `users` WHERE username = %s"
+    cursor = db.query(query, para=str(username))
     for row in cursor:
         if row["trellotoken"] != None:
             return True
@@ -117,14 +126,14 @@ def initStoryTable():
 # This function adds a trello token value to a user's account.
 def addToken(username, token):
     global db
-    query = "UPDATE `users` SET trellotoken='" + str(token) + "' WHERE username='" + str(username) + "'"
-    db.query(query)
+    query = "UPDATE `users` SET trellotoken = %s WHERE username = %s"
+    db.query(query, para=(str(token), str(username)))
 
 # This function gets a user's trello token from the database.
 def getToken(username):
     global db
-    query = "SELECT trellotoken FROM `users` WHERE username = '" + str(username) + "'"
-    cursor = db.query(query)
+    query = "SELECT trellotoken FROM `users` WHERE username = %s"
+    cursor = db.query(query, para=str(username))
     for row in cursor:
         if row["trellotoken"] != None:
             return str(row["trellotoken"])
@@ -150,8 +159,8 @@ def initApiTable():
 # This function will either return the user's key or return False.
 def lookupApiKey(username):
     global db
-    query = "SELECT apikey FROM `API` WHERE username = '" + str(username) + "'"
-    cursor = db.query(query)
+    query = "SELECT apikey FROM `API` WHERE username = %s"
+    cursor = db.query(query, para=str(username))
     row = cursor.fetchone()
     if row != None:
         if row["apikey"] != None and len(row["apikey"]) > 0 and row["apikey"] != "":
@@ -164,8 +173,8 @@ def lookupApiKey(username):
 # This function will either return True or False, depending on if the user has API row in API DB.
 def confirmApiUser(username):
     global db
-    query = "SELECT username FROM `API` WHERE username = '" + str(username) + "'"
-    cursor = db.query(query)
+    query = "SELECT username FROM `API` WHERE username = %s"
+    cursor = db.query(query, para=str(username))
     row = cursor.fetchone()
     if row != None:
         if row["username"] != None:
@@ -178,14 +187,14 @@ def confirmApiUser(username):
 # This function adds users to database.
 def createApiUser(username):
     global db
-    query = "INSERT INTO `API` (`username`) VALUES ('%s')" % (username)
-    db.query(query)
+    query = "INSERT INTO `API` (`username`) VALUES (%s)"
+    db.query(query, para=str(username))
 
 # This function adds the api key to the user's row in the data table.
 def addApiKey(username, key):
     global db
-    query =  "UPDATE `API` SET apikey='" + str(key) + "' WHERE username='" + str(username) + "'"
-    db.query(query)
+    query =  "UPDATE `API` SET apikey = %s WHERE username = %s"
+    db.query(query, para=(str(key), str(username)))
 
 # This function generates an API key.
 def createApiKey(username):
@@ -193,8 +202,8 @@ def createApiKey(username):
     import os
     genkey = str(hexlify(os.urandom(32)))
     global db
-    query = "SELECT apikey FROM `API` WHERE apikey = '" + str(genkey) + "'"
-    cursor = db.query(query)
+    query = "SELECT apikey FROM `API` WHERE apikey = %s"
+    cursor = db.query(query, para=str(genkey))
     row = cursor.fetchone()
     if row != None:
         if row["apikey"] != None:
@@ -205,8 +214,8 @@ def createApiKey(username):
 
 def checkApiKey(key):
     global db
-    query = "SELECT apikey FROM `API` WHERE apikey = '" + str(key) + "'"
-    cursor = db.query(query)
+    query = "SELECT apikey FROM `API` WHERE apikey = %s"
+    cursor = db.query(query, para=str(key))
     row = cursor.fetchone()
     if row != None:
         return True
@@ -246,8 +255,8 @@ def getStories(source=0):
             source = "Daily Caller"
         if source == "weaselzippers":
             source = "Weasel Zippers"
-        query = "SELECT * FROM `stories` WHERE website = '%s'" % (source)
-        cursor = db.query(query)
+        query = "SELECT * FROM `stories` WHERE website = %s"
+        cursor = db.query(query, para=str(source))
         stories = []
         for row in cursor:
             rowstory = {}

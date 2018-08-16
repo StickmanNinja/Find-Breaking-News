@@ -399,6 +399,7 @@ def ChicksOnTheRight():
         url = story.find("a",href=True)['href']
         d = {"source": source, 'headline': headline, 'url': url}
         chicksontherightlist.append(d)
+    driver.quit()
 
 # This function searches FederalistPapers for stories.
 def FederalistPapers():
@@ -562,7 +563,7 @@ def connectNewsLists():
     print "finished!"
                 
 # The 'scrapingfunctions' list contains all functions that search for news stories.
-scrapingfunctions = [scrapeFoxNews, scrapeDailyWire, scrapeTheGatewayPundit, scrapeWND, CT, InsiderFoxNews, TheHill, ijr, Breitbart, FreeBeacon, Dennis, WesternJournal, JudicialWatch, DailyCaller, WeaselZippers, MadWorldnews, RedStateWatcher, NTKNetwork, ChicksOnTheRight, FederalistPapers, SeanHannity, BizPacReview, WashingtonExaminer, WashingtonTimes, LifeZette, TheRightScoop, TheAntiMedia]
+scrapingfunctions = [scrapeFoxNews, scrapeDailyWire, scrapeTheGatewayPundit, scrapeWND, CT, InsiderFoxNews, TheHill, ijr, Breitbart, FreeBeacon, Dennis, WesternJournal, JudicialWatch, DailyCaller, WeaselZippers, MadWorldNews, RedStateWatcher, NTKNetwork, ChicksOnTheRight, FederalistPapers, SeanHannity, BizPacReview, WashingtonExaminer, WashingtonTimes, LifeZette, TheRightScoop, TheAntiMedia]
 
 # This function prints all items from the global 'stories' list.
 def printStories():
