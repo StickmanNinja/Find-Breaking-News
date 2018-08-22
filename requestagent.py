@@ -74,6 +74,7 @@ def success():
 #---------------------------------------------------
 @app.route("/trellotool", methods = ["GET", "POST"])
 def trellotool():
+    import time
     if request.method == "POST":
         url = request.form["url"]
         url = getShortLink(url)
@@ -91,6 +92,7 @@ def trellotool():
                         filtered[story["source"]] = []
                         filtered[story["source"]].append(story)
                 for sourcename in filtered.keys():
+                    time.sleep(2.5)
                     newlist = Trello(key, usertoken).createList(sourcename, targetid)["id"]
                     for story in filtered[sourcename]:
                         Trello(key, usertoken).addCard(newlist, name=story["headline"], desc=story["url"])

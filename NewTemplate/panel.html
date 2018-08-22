@@ -15,12 +15,14 @@
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sintony:700" rel="stylesheet">
     <link rel="icon" href="{{url_for('static', filename='icon.png')}}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Varela" rel="stylesheet">
 	<style>
 		body, html {
 			width: 100%;
 			height: 100%;
 			background-color: #333;
-			overflow-x: hidden;
 		}
 		.login {
 			width: 500px;
@@ -89,7 +91,7 @@
 		header {
 			height: 80px;
 			width: 100%;
-			background: #2e4c84;
+			background: #323232;
 		}
 		logout {
             padding-right: 15px;
@@ -113,13 +115,14 @@
             text-decoration:underline;
         }
 		name {
-			float: left;
-			margin-top: 20px;
-			margin-left: 50px;
+            width: 100%;
+            position: absolute;
+            text-align: center;
 			font-size: 30px;
+            margin-top: 20px;
 			color: #FFFFFF;
 			text-decoration: none;
-            font-family: 'Pacifico', cursive;
+            font-family: 'Varela', sans-serif;
 		}
         name:hover {
             text-decoration: underline;
@@ -132,7 +135,8 @@
 		}
         #holder {
             background-color: #ffffff;
-            margin: auto;
+            margin: 0px;
+            width: 100%;
             position: relative;
         }
         footer {
@@ -153,20 +157,56 @@
               background-color: #202020;
               display: inline;
         }
-
-        @media only screen and (min-width: 1500px) {
-            #holder {
-                width: 50%;
-                max-width: 2000px;
-                margin: auto;
-            }
-            body {
-                background-color: #333;
-                background-image: url("{{url_for('static', filename='lovely.png')}}");
-            }
-            footer {
-                background-color: transparent;
-            }
+        
+        nav {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: auto;
+            text-align: center;
+        }
+        li {
+            font-family: 'Lato', sans-serif;
+            font-size: 30px;
+            list-style: none; 
+            margin: 0px;
+            padding: 0px;
+            display: inline-block;
+            list-style: none;
+            margin: 15px;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        
+        li:hover {
+            background-color: #ffffff;
+            color: #21ce99;
+            cursor: pointer;
+        }
+        
+        #navholder {
+            background-color: #21ce99;
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+            height: auto;
+        }
+        i {
+            font-size: 20px;
+        }
+        .homebutton {
+            font-size: 45px;
+            float: left;
+            position: absolute;
+            display: inline-box;
+        }
+        
+        #wrapper {
+            width: 100%;
+            background-color: #21ce99;
         }
 	</style>
 </head>
@@ -181,11 +221,11 @@
         });
     </script>
     <div id = "holder">
-	<header class="bg-dark">
-		<a href = "{{ url_for('home') }}"><name>News Finder</name></a>
-		<logout><a href="{{ url_for('logout') }}">Log Out</a></logout>
-	</header>
-	
+        <ul id="navholder">
+            <li><i class="fa fa-cog" aria-hidden="true"></i> Trello</li>
+            <li><i class="fa fa-cog" aria-hidden="true"></i> Email</li>
+            <li><i class="fa fa-cog" aria-hidden="true"></i> API</li>
+        </ul>
   <div class="container">
 	  <br>
 	  <br>

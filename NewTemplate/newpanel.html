@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Varela" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gentium+Basic" rel="stylesheet">
+<!------ Include the above in your HEAD tag ---------->
+<style>
+    .page{
+    display:flex;
+    flex-direction:row;
+    height:100vh;
+}
+
+.sidebar{
+    flex:1;
+    border:solid #21ce99 0px;
+    background-color: #1C1F23;
+    height:100%;
+    max-width: 200px;
+}
+
+.content{
+    flex:4;
+    border:solid #21ce99 0px;
+    height:100%;
+}
+
+    header {
+        width: 100%;
+        background-color: #21ce99;
+        padding-top: 35px;
+        padding-bottom: 35px;
+        text-align: center;
+        color: #ffffff;
+        font-size: 30px;
+        font-family: 'Varela', sans-serif;
+    }
+    .list-group, .list-group-item {
+        background-color: #1C1F23 !important;
+        color: #ffffff;
+    }
+    .list-group-item:hover {
+        color: #21ce99;
+        text-decoration: underline;
+        text-decoration-color: #21ce99;
+    }
+    h1 {
+        text-align: center;
+        padding-top 40px;
+    }
+    a {
+        display: none;
+    }
+    button {
+        width: 200px;
+        height: 75px;
+        margin: auto;
+        border: none;
+        background-color: #21ce99;
+        color: #ffffff;
+        font-size: 35px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #1ba379;
+    }
+    #buttonrow {
+        margin-top: 10vh;
+    }
+    
+    #trello {
+        background-color: #315989;
+        font-family: 'Pacifico', cursive;
+    }
+    #trello:hover {
+        background-color: #1e3959;
+    }
+    img {
+        width: 50px;
+        height: 45px
+    }
+    .toolbuttons {
+        width: 300px;
+        float: left;
+        background-color: #dee1e6;
+        text-align: center;
+        position: relative;
+        margin-top: 10vh;
+        margin-left: 20px;
+        font-family: 'Gentium Basic', serif;
+}
+    h1 {
+        font-family: 'Gentium Basic', serif;
+    }
+</style>
+    
+<script>
+window.onload = function() {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	data: [{
+		type: "doughnut",
+		startAngle: 60,
+        indexLabel: "{label} - #percent%",
+		toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+		dataPoints: [
+			{y: 49, color: "#21ce99"} ,
+			{y: 151, color: "#DEE1E6"},
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+
+<body>
+<header></header>
+<div class="page">
+<div class="sidebar">
+    <div class="list-group">
+      <a class="list-group-item" href = "Trello.com">Trello Settings</a>
+      <a class="list-group-item" href = "gmail.com">Email Settings</a>
+      <a class="list-group-item" href = "API.com">API Settings</a>
+    </div>
+</div>    
+<div class="content">
+    <div class="container">
+<br>
+<div class = "toolbuttons">
+        <br><br>
+        <button>Web API</button>
+        <br><br>
+        <button id = "trello">Trello</button>
+        <br><br>
+        <button>Email</button>
+        <br><br><br>
+    </div>
+</div>
+<br><br><br><br>
+            <div class="container-fluid" style = "margin: auto;">
+            <h1>Percentage of Allowed News Requests Made:</h1><br>
+            <div id="chartContainer" style="height: 370px; width: 100vh;"></div>
+            <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+          </div>
+
+
+</div>
+</div>
+</body>
+</html>

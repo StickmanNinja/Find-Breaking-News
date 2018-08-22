@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css?family=Varela" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Particles Webpage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id = "particles-js">
+<h1>Automatic News. <span id = "subtitle">Powered by collective data and artificial intelligence.</span></h1>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<script>
+	particlesJS.load("particles-js", "particles.json",
+	function() {
+		console.log("particles.json loaded...")
+	});
+</script>
+<header>
+<name>News Finder - Beta Version</name>
+<login><a href = "signup.html">Sign Up</a>  <a href = "login.html">Log In</a></login>
+</header>
+</div>
+
+<article class = "article">
+<h2>What We Offer.</h2>
+<p>Our technology service uses artificial intelligence to find, analyze, and deliver news from <a href="sources.html">trusted media outlets</a>.</p>
+<br><br>
+<p>Our system has numerous options for delivery:</p>
+<br><br>
+<ul>
+	<li>By Email.</li>
+	<li>Through Trello.</li>
+	<li>Via our own web API.</li>
+</ul>
+<br><br>
+<p>Interested? Check it all out by signing up with our platform today!</p> <br><br><br><br>
+<div id="signup"><button>Get Started</button></div>
+</article>
+<footer><p id = "footertext">Copyright 2018 NewsFinder.io - All Rights Reserved.<p></footer>
+</body>
+
+</html>

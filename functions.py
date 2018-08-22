@@ -26,6 +26,13 @@ class DB:
     def query(self, sql, para=0):
         try:
             if para!= 0:
+                if len(para) == 2:
+                    listy = []
+                    for i in para:
+                        listy.append(i)
+                    mytuple = tuple(listy)
+                    para = mytuple
+
                 cursor = self.conn.cursor()
                 cursor.execute(sql, para)
             else:
@@ -86,7 +93,7 @@ def checkString(password):
 def lookupUser(username, password):
     global db
     query = "SELECT password FROM `users` WHERE username = %s"
-    cursor = db.query(query)
+    cursor = db.query(query, para=str(username))
     for row in cursor:
         if row["password"] == password:
             return True
