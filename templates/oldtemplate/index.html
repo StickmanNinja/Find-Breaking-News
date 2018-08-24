@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<title>Login</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sintony:700" rel="stylesheet">
+    <link rel="icon" href="{{url_for('static', filename='icon.png')}}">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+
+	<style>
+		body, html {
+			width: 100%;
+			height: 100%;
+			background-color: #FFFFFF;
+			overflow-x: hidden;
+            
+		}        
+		.login {
+			width: 500px;
+			height: auto;
+			margin: auto;
+			text-align: center;
+			background-color: #FFFFFF;
+			display: block;
+			border-radius: 15px;
+			text-align: center;
+		}
+		h1 {
+			color: #ffffff;
+            text-align: center;
+            font-size: 40px;
+            max-width: 500px;
+            margin: auto;
+            font-family: 'Poppins', sans-serif;
+		}
+        h3 {
+            color: #ffffff;
+            text-align: center;
+            margin: auto;
+            font-family: 'Sintony', sans-serif;
+            font-size: 20px;
+        }
+		input {
+			margin: 20px;
+			width: 80%;
+			height: 50px;
+		}
+		input::placeholder {
+			color: #E9EEA;
+		}
+		.button {
+			width: 300px;
+			border-radius: 15px;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			color: #ffffff;
+			line-height: 30px;
+			font-size: 20px;
+			transition-duration: 1s;
+			text-align: center;
+            margin: auto;
+            background: linear-gradient(to bottom, #61bd4f 0, #5aac44 100%);
+            font-family: 'Sintony', sans-serif;
+            box-shadow: 0 2px 0 #3f6f21;
+		}
+		.button:hover {
+			text-decoration: underline;
+			transition-duration: 1s;
+			cursor: pointer;
+		}
+		.logo {
+			margin: auto;
+			width: 60px;
+			height: 60px;
+		}
+		a {
+			color: #ffffff;
+			text-decoration: none;
+			text-align: center;
+			margin: auto;
+		}
+        a:hover {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        
+        p {
+            font-size: 10px;
+            text-align: center;
+            margin-bottom: 0px;
+            padding: 15px;
+        }
+		.title {
+			margin-top: 100px;
+		}
+		header {
+			height: 80px;
+			width: 100%;
+            background-color: transparent;
+            display: inline;
+		}
+		logout,name {
+			float: right;
+			margin-top: 25px;
+			margin-right: 50px;
+			font-size:20px; 
+			color: #FFFFFF;
+			cursor: pointer;
+		}
+        
+        login{
+			float: right;
+			margin-top: 25px;
+			margin-right: 50px;
+			font-size:20px; 
+			color: #FFFFFF;
+			cursor: pointer;
+		}
+        login:hover{
+            text-decoration: underline;
+        }
+        logout:hover {
+            text-decoration:underline;
+        }
+		name {
+			float: left;
+			margin-top: 20px;
+			margin-left: 50px;
+			font-size: 30px;
+			color: #FFFFFF;
+			text-decoration: none;
+            font-family: 'Pacifico', cursive;
+		}
+        name:hover {
+            text-decoration: underline;
+        }
+        article.header1 {
+            background: linear-gradient(to bottom right, #3170e2, #5D8DE3);
+        }
+        h4 {
+            text-align: center;
+            font-size: 36px;
+            font-family: 'Poppins', sans-serif;
+        }
+        img {
+            max-width: 500px;
+            display: block;
+            margin: auto;
+        }
+        article.header3 {
+            background-color: #5aac44;
+        }
+        footer {
+            background-color: #333;
+            color: #ffffff;
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+        }
+        #logintop {
+            padding-right: 15px;
+            padding-left: 15px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-radius: 5px;
+            background-color: #5aac44;
+            text-decoration: none;
+            box-shadow: 0 2px 0 #3f6f21;
+            font-family: 'Sintony', sans-serif;
+        }
+        .header2 {
+            background-color: #ffffff;
+        }
+        
+        
+        #babylink {
+            text-align: center;
+            margin: auto;
+        }
+
+        #particles-js {
+              position: fixed;
+              width: 100%;
+              height: 100%;
+              z-index: 0;
+              top: 0px;
+              left: 0px;
+              background-color: #202020;
+              display: inline;
+        }
+        
+        #holder {
+            position: relative;
+        }
+
+         @media only screen and (max-width: 1500px) {
+            #particles-js {
+                display: none;
+            }
+
+            #space {
+                display: none;
+            }
+
+            body {
+                background-color: #202020;
+            }
+         }
+
+        @media only screen and (min-width: 1500px) {
+            #holder {
+                width: 50%;
+                max-width: 2000px;
+                margin: auto;
+            }
+            footer {
+                background-color: transparent;
+            }
+        }
+	</style>
+</head>
+	
+<body>
+    <div id = "particles-js"></div>
+    <script type="text/javascript" src="{{ url_for('static', filename='particles.min.js') }}"></script>
+    <script>
+        particlesJS.load("particles-js", "{{ url_for('static', filename='particles.json') }}",
+        function() {
+            console.log("particles.json loaded...")
+        });
+    </script>
+    <br id = "space">
+    <div id="holder">
+	<header>
+		<name>News Finder</name>
+        <a href = "{{ url_for('login') }}">
+            <login>
+                <div id="logintop">Log In
+                </div>
+            </login></a>
+	</header>
+    <article class="header1">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1>Automatic News.</h1>
+        <br>
+        <br>
+        <h3>Our news finding algorithms will save you countless hours each day.</h3>
+        <br>
+        <br>
+        <a href = "{{ url_for('signup') }}"><div class= "button">Sign Up Now</div></a>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </article>
+    <article class="header2">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h4>Sources You Can Trust.</h4>
+        <br>
+        <img src="{{url_for('static', filename='sources.png')}}"><br><br><br>
+        <a href = "sources.html"><div class= "button"> Source List </div></a>
+        <br><br><br><br><br><br><br>
+    </article>
+            
+            
+    <article class="header1">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1>Programmers love us!</h1>
+        <br>
+        <br>
+        <h3>Our custom REST API makes it easy for programmers to build projects.</h3>
+        <br>
+        <br>
+        <a href = "{{ url_for('docs') }}"><div class= "button"> Documentation </div></a>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </article>
+    
+    <footer><p>NewsFinder.io - Copyright 2018 - All Rights Reserved</p></footer>
+</div>
+</body>
+
+</html>

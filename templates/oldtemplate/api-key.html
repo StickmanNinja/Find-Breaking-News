@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<title>Login</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sintony:700" rel="stylesheet">
+    <link rel="icon" href="{{url_for('static', filename='icon.png')}}">
+	<style>
+		body, html {
+			width: 100%;
+			height: 100%;
+			background-color: #FFFFFF;
+			overflow-x: hidden;
+		}
+		.login {
+			width: 500px;
+			height: auto;
+			margin: auto;
+			text-align: center;
+			background-color: #FFFFFF;
+			display: block;
+			border-radius: 15px;
+			text-align: center;
+		}
+		h1 {
+			color: #5d91f7;
+		}
+		input {
+			margin: 20px;
+			width: 80%;
+			height: 50px;
+		}
+		input::placeholder {
+			color: #E9EEA;
+		}
+		.button {
+			width: 300px;
+			border-radius: 15px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			background-color: #5d91f7;
+			color: #ffffff;
+			line-height: 30px;
+			font-size: 20px;
+			transition-duration: 1s;
+			text-align: center;
+            margin: auto;
+		}
+		.button:hover {
+			text-decoration: underline;
+			transition-duration: 1s;
+			cursor: pointer;
+		}
+		.logo {
+			margin: auto;
+			width: 60px;
+			height: 60px;
+		}
+		a {
+			color: #5d91f7;
+			text-decoration: underline;
+			text-align: center;
+			width: 100%;
+			margin: auto;
+		}
+        
+        h4 {
+            font-size: 13px;
+            display: block;
+            border: 1px solid #5d91f7;
+            text-align: center;
+            min-width: 350px;
+            padding: 5px;
+            border-radius: 5px;
+        }
+		.title {
+			margin-top: 100px;
+		}
+        h3 {
+            display: block;
+        }
+		header {
+			height: 80px;
+			width: 100%;
+			background-color: #343a40;
+		}
+		logout,name {
+			float: right;
+			margin-top: 25px;
+			margin-right: 50px;
+			font-size:20px; 
+			color: #FFFFFF;
+			cursor: pointer;
+		}
+        
+        login{
+			float: right;
+			margin-top: 25px;
+			margin-right: 50px;
+			font-size:20px; 
+			color: #FFFFFF;
+			cursor: pointer;
+		}
+        login:hover{
+            text-decoration: underline;
+        }
+        logout:hover {
+            text-decoration:underline;
+        }
+		name {
+			float: left;
+			margin-top: 20px;
+			margin-left: 50px;
+			font-size: 30px;
+			color: #FFFFFF;
+			text-decoration: none;
+            font-family: 'Pacifico', cursive;
+		}
+        name:hover {
+            text-decoration: underline;
+        }
+        #logintop {
+            padding-right: 15px;
+            padding-left: 15px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-radius: 5px;
+            background-color: #5aac44;
+            text-decoration: none;
+            box-shadow: 0 2px 0 #3f6f21;
+            font-family: 'Sintony', sans-serif;
+        }
+        #holder {
+            height: 98%;
+        }
+        footer {
+            background-color: #333;
+            color: #ffffff;
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+            font-size: 10px;
+            text-align: center;
+            margin-bottom: 0px;
+            padding: 15px;
+        }
+        @media only screen and (min-width: 1500px) {
+            #holder {
+                width: 50%;
+                max-width: 2000px;
+                margin: auto;
+                background-color: #ffffff;
+            }
+            body {
+                background-color: #333;
+                background-image: url("{{url_for('static', filename='lovely.png')}}");
+            }
+            footer {
+                background-color: transparent;
+            }
+            p {
+                margin: auto;
+            }
+        }
+	</style>
+</head>
+	
+<body>
+	<div id="holder">
+	<header>
+		<a href = "{{ url_for('success') }}"><name>News Finder</name></a>
+		<a href = "{{ url_for('logout') }}">
+            <logout>
+                <div id="logintop">Log Out
+                </div>
+            </logout></a>
+	</header>
+	<br>
+    <br>
+ <div class = "row">
+	  <div class="col-sm-3"></div>
+     <div class="col-sm-6"><h1>Developer Keys</h1></div>
+    </div>
+    <br>
+<div class = "row">
+	  <div class="col-sm-3"></div>
+     <div class="col-sm-6"><h3>Key:</h3></div>
+    </div>
+</body>
+    
+<div class = "row">
+	  <div class="col-sm-3"></div>
+     <div class="col-sm-6"><h4>{{key}}</h4></div>
+    </div>
+    <br>
+    <br>
+<div class = "row">
+	  <div class="col-sm-3"></div>
+     <div class="col-sm-6"><p>You can use your API key by connecting with to the API endpoint <a href="linktoapi">here</a></p></div>
+    </div>
+    </div>
+</body>
+
+</html>

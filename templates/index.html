@@ -1,314 +1,231 @@
 <!DOCTYPE html>
-
-<html lang="en">
+<html>
 <head>
-	<title>Login</title>
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css?family=Varela" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Particles Webpage</title>
+    <style>
+    #particles-js {
+	background: #21ce99;
+	width: 100vw;
+	height: 100vh;
+	padding: 0px;
+	margin: 0px;
+}
 
-	<!-- jQuery library -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+body {
+	padding: 0px;
+	margin: 0px;
+	background-color: #21ce99;
+}
 
-	<!-- Latest compiled JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Sintony:700" rel="stylesheet">
-    <link rel="icon" href="{{url_for('static', filename='icon.png')}}">
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+h1 {
+	color: #ffffff;
+	font-size: 75px;
+	font-family: Arial;
+	display: inline;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	margin-top: 35vh;
+	font-family: 'Varela', sans-serif;
+}
 
-	<style>
-		body, html {
-			width: 100%;
-			height: 100%;
-			background-color: #FFFFFF;
-			overflow-x: hidden;
-            
-		}        
-		.login {
-			width: 500px;
-			height: auto;
-			margin: auto;
-			text-align: center;
-			background-color: #FFFFFF;
-			display: block;
-			border-radius: 15px;
-			text-align: center;
-		}
-		h1 {
-			color: #ffffff;
-            text-align: center;
-            font-size: 40px;
-            max-width: 500px;
-            margin: auto;
-            font-family: 'Poppins', sans-serif;
-		}
-        h3 {
-            color: #ffffff;
-            text-align: center;
-            margin: auto;
-            font-family: 'Sintony', sans-serif;
-            font-size: 20px;
-        }
-		input {
-			margin: 20px;
-			width: 80%;
-			height: 50px;
-		}
-		input::placeholder {
-			color: #E9EEA;
-		}
-		.button {
-			width: 300px;
-			border-radius: 15px;
-			padding-top: 15px;
-			padding-bottom: 15px;
-			color: #ffffff;
-			line-height: 30px;
-			font-size: 20px;
-			transition-duration: 1s;
-			text-align: center;
-            margin: auto;
-            background: linear-gradient(to bottom, #61bd4f 0, #5aac44 100%);
-            font-family: 'Sintony', sans-serif;
-            box-shadow: 0 2px 0 #3f6f21;
-		}
-		.button:hover {
-			text-decoration: underline;
-			transition-duration: 1s;
-			cursor: pointer;
-		}
-		.logo {
-			margin: auto;
-			width: 60px;
-			height: 60px;
-		}
-		a {
-			color: #ffffff;
-			text-decoration: none;
-			text-align: center;
-			margin: auto;
-		}
-        a:hover {
-            color: #ffffff;
-            text-decoration: none;
-        }
-        
-        p {
-            font-size: 10px;
-            text-align: center;
-            margin-bottom: 0px;
-            padding: 15px;
-        }
-		.title {
-			margin-top: 100px;
-		}
-		header {
-			height: 80px;
-			width: 100%;
-            background-color: transparent;
-            display: inline;
-		}
-		logout,name {
-			float: right;
-			margin-top: 25px;
-			margin-right: 50px;
-			font-size:20px; 
-			color: #FFFFFF;
-			cursor: pointer;
-		}
-        
-        login{
-			float: right;
-			margin-top: 25px;
-			margin-right: 50px;
-			font-size:20px; 
-			color: #FFFFFF;
-			cursor: pointer;
-		}
-        login:hover{
-            text-decoration: underline;
-        }
-        logout:hover {
-            text-decoration:underline;
-        }
-		name {
-			float: left;
-			margin-top: 20px;
-			margin-left: 50px;
-			font-size: 30px;
-			color: #FFFFFF;
-			text-decoration: none;
-            font-family: 'Pacifico', cursive;
-		}
-        name:hover {
-            text-decoration: underline;
-        }
-        article.header1 {
-            background: linear-gradient(to bottom right, #3170e2, #5D8DE3);
-        }
-        h4 {
-            text-align: center;
-            font-size: 36px;
-            font-family: 'Poppins', sans-serif;
-        }
-        img {
-            max-width: 500px;
-            display: block;
-            margin: auto;
-        }
-        article.header3 {
-            background-color: #5aac44;
-        }
-        footer {
-            background-color: #333;
-            color: #ffffff;
-            padding-bottom: 0px;
-            margin-bottom: 0px;
-        }
-        #logintop {
-            padding-right: 15px;
-            padding-left: 15px;
-            padding-top: 5px;
-            padding-bottom: 5px;
-            border-radius: 5px;
-            background-color: #5aac44;
-            text-decoration: none;
-            box-shadow: 0 2px 0 #3f6f21;
-            font-family: 'Sintony', sans-serif;
-        }
-        .header2 {
-            background-color: #ffffff;
-        }
-        
-        
-        #babylink {
-            text-align: center;
-            margin: auto;
-        }
+h2 {
+	color: rgb(128, 128, 128);
+	font-family: Arial;
+	font-size: 45px;
+	text-align: center;
+}
 
-        #particles-js {
-              position: fixed;
-              width: 100%;
-              height: 100%;
-              z-index: 0;
-              top: 0px;
-              left: 0px;
-              background-color: #202020;
-              display: inline;
-        }
-        
-        #holder {
-            position: relative;
-        }
+#subtitle {
+	color: white;
+	font-family: 'Lato', sans-serif;
+	font-size: 30px;
+	display: block;
+}
 
-         @media only screen and (max-width: 1500px) {
-            #particles-js {
-                display: none;
-            }
+a {
+	color: #ffffff;
+	text-decoration: None;
+	text-align: center;
+	margin: auto;
+	margin-top: 15px;
+	margin-right: 5px;
+	border: 2px solid #ffffff;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 15px;
+	padding-left: 15px;
+	transition-duration: .3s;
+}
 
-            #space {
-                display: none;
-            }
+a:hover {
+	color: #21ce99;
+	background-color: #ffffff;
+	transition-duration: .3s;
+}
 
-            body {
-                background-color: #202020;
-            }
-         }
+login,name {
+	margin-top: 35px;
+	font-size: 20px;
+	font-family: Arial;
+	position: relative;
+	display: inline;
+	}
 
-        @media only screen and (min-width: 1500px) {
-            #holder {
-                width: 50%;
-                max-width: 2000px;
-                margin: auto;
-            }
-            footer {
-                background-color: transparent;
-            }
-        }
-	</style>
+login {
+	float: right;
+	cursor: pointer;
+	margin-right: 50px;
+	margin-top: 45px;	
+}
+
+name {
+	float: left;
+	margin-left: 55px;
+	color: #ffffff;
+	font-family: 'Varela', sans-serif;
+    font-size: 30px;
+}
+
+i {
+	font-size: 50px;
+	margin-top: 0px;
+}
+
+.article {
+	position: relative;
+    padding-top: 20vh;
+    background-color: #1b1b1d;
+    height: 100%;
+    padding-bottom: 35vh;
+}
+
+.article h2 {
+	color: #ffffff;
+	font-family: 'Varela', sans-serif;
+}
+
+.article p {
+	color: #ffffff;
+	font-family: 'Lato', sans-serif;
+	font-size: 25px;
+	text-align: center;
+	width: 50vw;
+    max-width: 800px;
+	margin: auto;
+	text-align: left;
+}
+
+.article ul {
+	color: #ffffff;
+	font-family: 'Lato', sans-serif;
+	font-size: 25px;
+	width: 25vw;
+	margin: auto;
+}
+
+.article a {
+	border: 0px;
+	color: #21ce99;
+	padding: 0px;
+	margin: 0px;
+	text-decoration: none;
+	text-decoration-color: #21ce99;
+}
+
+.article a:hover{
+	background-color: transparent;
+	text-decoration: underline;
+	text-decoration-color: #21ce99;
+}
+
+
+.article button {
+	background-color: #1b1b1d;
+	padding-top: 5px;
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-bottom: 5px;
+	width: 200px;
+	height: 60px;
+	color: #21ce99;
+	font-size: 20px;
+	margin: auto;
+	border: 2px solid #21ce99;
+	font-family: 'Lato', sans-serif;
+}
+
+#signup {
+	text-align: center;
+}
+
+.article button:hover {
+	background-color: #21ce99;
+	color: #ffffff;
+	cursor: pointer;
+}
+footer {
+	width: 100%;
+	background: #21ce99;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+#footertext {
+	text-align: center;
+	font-family: 'Lato', sans-serif;
+	font-size: 12px;
+	color: #ffffff;
+}
+
+header {
+    max-width: 1000px;
+    margin: auto;
+}
+
+    </style>
 </head>
-	
+
 <body>
-    <div id = "particles-js"></div>
-    <script type="text/javascript" src="{{ url_for('static', filename='particles.min.js') }}"></script>
-    <script>
-        particlesJS.load("particles-js", "{{ url_for('static', filename='particles.json') }}",
+<div id = "particles-js">
+<h1>Automatic News. <span id = "subtitle">Powered by collective data and artificial intelligence.</span></h1>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<script>
+	particlesJS.load("particles-js", "{{ url_for('static', filename='particles.json') }}",
         function() {
             console.log("particles.json loaded...")
         });
-    </script>
-    <br id = "space">
-    <div id="holder">
-	<header>
-		<name>News Finder</name>
-        <a href = "{{ url_for('login') }}">
-            <login>
-                <div id="logintop">Log In
-                </div>
-            </login></a>
-	</header>
-    <article class="header1">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h1>Automatic News.</h1>
-        <br>
-        <br>
-        <h3>Our news finding algorithms will save you countless hours each day.</h3>
-        <br>
-        <br>
-        <a href = "{{ url_for('signup') }}"><div class= "button">Sign Up Now</div></a>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-    </article>
-    <article class="header2">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h4>Sources You Can Trust.</h4>
-        <br>
-        <img src="{{url_for('static', filename='sources.png')}}"><br><br><br>
-        <a href = "sources.html"><div class= "button"> Source List </div></a>
-        <br><br><br><br><br><br><br>
-    </article>
-            
-            
-    <article class="header1">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h1>Programmers love us!</h1>
-        <br>
-        <br>
-        <h3>Our custom REST API makes it easy for programmers to build projects.</h3>
-        <br>
-        <br>
-        <a href = "{{ url_for('docs') }}"><div class= "button"> Documentation </div></a>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-    </article>
-    
-    <footer><p>NewsFinder.io - Copyright 2018 - All Rights Reserved</p></footer>
+</script>
+<header>
+<name>News Finder - Beta Version</name>
+<login><a href = "{{url_for('signup')}}">Sign Up</a>  <a href = "{{url_for('login')}}">Log In</a></login>
+</header>
 </div>
+
+<article class = "article">
+<h2>What We Offer.</h2>
+<p>Our technology service uses artificial intelligence to find, analyze, and deliver news from <a href="sources.html">trusted media outlets</a>.</p>
+<br><br>
+<p>Our system has numerous options for delivery:</p>
+<br><br>
+<ul>
+	<li>By Email.</li>
+	<li>Through Trello.</li>
+	<li>Via our own web API.</li>
+</ul>
+<br><br>
+<p>Interested? Check it all out by signing up with our platform today!</p> <br><br><br><br>
+<div id="signup"><button>Get Started</button></div>
+</article>
+<footer><p id = "footertext">Copyright 2018 NewsFinder.io - All Rights Reserved.<p></footer>
 </body>
 
 </html>

@@ -15,19 +15,16 @@
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sintony:700" rel="stylesheet">
     <link rel="icon" href="{{url_for('static', filename='icon.png')}}">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 	<style>
-        * {
-            font-family: 'Lato', sans-serif;
-        }
 		body, html {
 			width: 100%;
 			height: 100%;
-			background-color: #f0f2f5;
+			background-color: #343a40;
 			overflow-y:hidden;
 		}
         body {
-            background-color: #f0f2f5;
+            background-color: #333;
+            background-image: url("lovely.png");
         }
 		.login {
 			width: 500px;
@@ -36,6 +33,7 @@
 			text-align: center;
 			background-color: #FFFFFF;
 			display: block;
+			border-radius: 15px;
 			text-align: center;
 		}
 		h1 {
@@ -55,15 +53,16 @@
 			width: 80%;
 			padding-top: 20px;
 			padding-bottom: 20px;
-			background-color: #21ce99;
+			background-color: #5d91f7;
 			margin: auto;
 			color: #ffffff;
 			line-height: 30px;
 			font-size: 20px;
 			transition-duration: 1s;
             border: none;
-            font-family: 'Lato', sans-serif;
-            border: 2px solid #21ce99;
+            font-family: 'Sintony', sans-serif;
+            box-shadow: 0 2px 0 #3f6f21;
+            background: linear-gradient(to bottom, #61bd4f 0, #5aac44 100%);
 		}
 		#button:hover {
 			text-decoration: underline;
@@ -76,20 +75,17 @@
 			height: 60px;
 		}
 		a {
-			color: #21ce99;;
+			color: #5d91f7;
 			text-decoration: underline;
 			text-align: center;
 			width: 100%;
 			margin: auto;
 		}
-        a:hover {
-            color: #21ce99 !important;
-        }
 		.title {
 			margin-top: 150px;
 		}
 		p {
-			color: #21ce99;
+			color: #5d91f7;
 		}
         name {
 			font-size: 30px;
@@ -105,24 +101,29 @@
               z-index: 0;
               top: 0px;
               left: 0px;
-              background-color: #f0f2f5;
+              background-color: #202020;
               display: inline;
         }
 
         form {
-            margin-top: 20vh;
+            position: relative;
         }
-        
-        input, select, textarea{
-        color: #21ce99;
-    }
 	</style>
 </head>
 	
 <body>
 
+	<div id = "particles-js"></div>
     <script type="text/javascript" src="{{ url_for('static', filename='particles.min.js') }}"></script>
+    <script>
+        particlesJS.load("particles-js", "{{ url_for('static', filename='particles.json') }}",
+        function() {
+            console.log("particles.json loaded...")
+        });
+    </script>
+    
     <form action = "{{ url_for('signup') }}" enctype="multipart/form-data" method="post">
+        <h1 class = "title"><name>News Finder</name></h1>
 	<div class = "login">
 		<br>
 		<p>Use letters and numbers only.</p>

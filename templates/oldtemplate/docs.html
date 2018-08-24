@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<title>Login</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sintony:700" rel="stylesheet">
+    <link rel="icon" href="{{url_for('static', filename='icon.png')}}">
+	<style>
+		body, html {
+			width: 100%;
+			height: 100%;
+			background-color: #FFFFFF;
+			overflow-x: hidden;
+		}
+		.login {
+			width: 500px;
+			height: auto;
+			margin: auto;
+			text-align: center;
+			background-color: #FFFFFF;
+			display: block;
+			border-radius: 15px;
+			text-align: center;
+		}
+		h1 {
+			background-color: #5d91f7;
+            color: white;
+            padding-top: 75px;
+            padding-bottom: 75px;
+            text-align: center;
+            margin-top: 0px;
+		}
+		input {
+			margin: 20px;
+			width: 80%;
+			height: 50px;
+		}
+		input::placeholder {
+			color: #E9EEA;
+		}
+		.button {
+			width: 300px;
+			border-radius: 15px;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			color: #ffffff;
+			line-height: 30px;
+			font-size: 20px;
+			transition-duration: 1s;
+			text-align: center;
+            margin: auto;
+            background: linear-gradient(to bottom, #61bd4f 0, #5aac44 100%);
+            font-family: 'Sintony', sans-serif;
+            box-shadow: 0 2px 0 #3f6f21;
+		}
+		.button:hover {
+			text-decoration: underline;
+			transition-duration: 1s;
+			cursor: pointer;
+		}
+		.logo {
+			margin: auto;
+			width: 60px;
+			height: 60px;
+		}
+		a {
+			color: #5d91f7;
+			text-align: center;
+			margin: auto;
+            text-decoration: none;
+		}
+        a:hover {
+            text-decoration: none;
+        }
+        
+        p {
+            font-size: 20px;
+            width: 60%;
+            margin: auto;
+        }
+		.title {
+			margin-top: 100px;
+		}
+		header {
+			height: 80px;
+			width: 100%;
+			background-color: #343a40;
+            margin-bottom: 0px;
+		}
+		logout,name {
+			float: right;
+			margin-top: 25px;
+			margin-right: 50px;
+			font-size:20px; 
+			color: #FFFFFF;
+			cursor: pointer;
+		}
+        
+        login{
+			float: right;
+			margin-top: 25px;
+			margin-right: 50px;
+			font-size:20px; 
+			color: #FFFFFF;
+			cursor: pointer;
+		}
+        login:hover{
+            text-decoration: underline;
+        }
+        logout:hover {
+            text-decoration:underline;
+        }
+		name {
+			float: left;
+			margin-top: 20px;
+			margin-left: 50px;
+			font-size: 30px;
+			color: #FFFFFF;
+			text-decoration: none;
+            font-family: 'Pacifico', cursive;
+		}
+        name:hover {
+            text-decoration: underline;
+        }
+        #logintop {
+            padding-right: 15px;
+            padding-left: 15px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-radius: 5px;
+            background-color: #5aac44;
+            text-decoration: none;
+            box-shadow: 0 2px 0 #3f6f21;
+            font-family: 'Sintony', sans-serif;
+        }
+        #holder {
+        }
+        footer {
+            background-color: #333;
+            color: #ffffff;
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+            font-size: 10px;
+            text-align: center;
+            margin-bottom: 0px;
+            padding: 15px;
+        }
+        h4 {
+            width: 60%;
+            margin: auto;
+            font-size: 30px;
+        }
+        @media only screen and (min-width: 1500px) {
+            #holder {
+                width: 50%;
+                max-width: 2000px;
+                margin: auto;
+                background-color: #ffffff;
+            }
+            body {
+                background-color: #333;
+                background-image: url("{{url_for('static', filename='lovely.png')}}");
+            }
+            footer {
+                background-color: transparent;
+            }
+            p {
+                margin: auto;
+            }
+        }
+	</style>
+</head>
+	
+<body>
+    <div id="holder">
+	<header>
+		<a href = "{{ url_for('success') }}"><name>News Finder</name></a>
+		<a href = "{{ url_for('logout') }}">
+            <logout>
+                <div id="logintop">Log Out
+                </div>
+            </logout></a>
+	</header>
+    <h1>API 1.0 Documentation</h1>
+    <br>
+    <br>
+        <br>
+        <br>
+        <h4>What Our API Does</h4>
+        <br>
+        <br>
+        <p>By sending a simple request to our server, you will get all of the latest news stories collected from sources like Fox News, The Daily Wire, and Conservative Tribune. <br><br> All responses from us will be in JSON format.</p>
+        <br>
+        <br>
+        <br>
+        <h4>Getting Started</h4>
+        <br>
+        <br>
+        <p>Getting set up on our API is easy. Once you create an account, you will have the option to generate a developer key.<br><br> Developer keys are just a random string of letters and numbers that lets our server know who you are when you make requests - it's like your personal license plate! <br> <br>Upon getting this key, you will be able to access all data from our website by visiting NewsFinder.io//api/v1.0/news and passing your api key as "key".</p>
+        <br>
+        <br>
+        <br>
+        <h4>Sifting Through The Data</h4>
+        <br>
+        <br>
+        <p>Sadly, we don't yet offer a way to filter through the sources we send back to you through the API.<br><br> If you only want 1 source returned, you will have to figure out how to do that yourself.</p><br><br><a href="{{ url_for('signup') }}"><div class="button">Convinced? Let's Begin!</div></a>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+    <footer>NewsFinder.io - Copyright 2018 - All Rights Reserved</footer>
+</body>
+
+</html>
