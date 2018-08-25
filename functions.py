@@ -3,6 +3,8 @@ import pymysql.cursors, os
 
 
 # (Using OS variables for security. These can be replaced with strings)
+
+
 password = os.environ['BreakingNewsPassword']
 username = os.environ['BreakingNewsUsername']
 dbname = os.environ['BreakingNewsDB']

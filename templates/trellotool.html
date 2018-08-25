@@ -2,7 +2,7 @@
 
 <html lang="en">
 <head>
-	<title>Login</title>
+	<title>Trello Tool</title>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -28,9 +28,8 @@
 			margin: auto;
 			text-align: center;
 			background-color: #FFFFFF;
-			display: block;
-			border-radius: 15px;
-			text-align: center;
+			border: 1px solid #ffffff;
+			color: #3bd09f;
 		}
 		h1 {
 			color: #5d91f7;
@@ -46,12 +45,10 @@
 		}
 		.button {
 			width: 200px;
-			border-radius: 15px;
 			padding-top: 10px;
 			padding-bottom: 10px;
-			background-color: #5d91f7;
-            box-shadow: 0 2px 0 #3f6f21;
-            background: linear-gradient(to bottom, #61bd4f 0, #5aac44 100%);
+            background-color: #3bd09f;
+			border: 1px solid #3bd09f;
 			color: #ffffff;
 			line-height: 30px;
 			font-size: 20px;
@@ -91,17 +88,16 @@
 		header {
 			height: 80px;
 			width: 100%;
-			background-color: #343a40;
+			background-color: #3bd09f;
 		}
 		logout {
             padding-right: 15px;
             padding-left: 15px;
             padding-top: 5px;
             padding-bottom: 5px;
-            border-radius: 5px;
-            background: linear-gradient(to bottom, #61bd4f 0, #5aac44 100%);
+            border-radius: 0px;
             text-decoration: none;
-            box-shadow: 0 2px 0 #3f6f21;
+            border: 1px solid #ffffff;
             font-family: 'Sintony', sans-serif;
             float: right;
 			margin-top: 25px;
@@ -112,19 +108,27 @@
 		}
         
         logout:hover {
-            text-decoration:underline;
+            background-color:#ffffff;
+            color: #3bd09f;
+            cursor: pointer;
         }
 		name {
+		padding-right: 15px;
+            padding-left: 15px;
+            padding-top: 5px;
+            padding-bottom: 5px;
 			float: left;
 			margin-top: 20px;
 			margin-left: 50px;
-			font-size: 30px;
+			font-size: 20px;
 			color: #FFFFFF;
 			text-decoration: none;
-            font-family: 'Pacifico', cursive;
+            font-family: Arial;
+            border: 1px solid #ffffff;
 		}
         name:hover {
-            text-decoration: underline;
+            background-color:#ffffff;
+            color: #3bd09f;
             cursor: pointer;
         }
         img {
@@ -165,7 +169,7 @@
     <div id="holder">
     <div class = "thingy">
 	<header>
-		<a href = "{{ url_for('success') }}"><name>News Finder</name></a>
+		<a href = "{{ url_for('success') }}"><name>Back</name></a>
 		<a href = "{{ url_for('logout') }}"><logout>Log Out</logout></a>
 	</header>
 	<br>

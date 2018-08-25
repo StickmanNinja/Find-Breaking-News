@@ -33,7 +33,7 @@
 			text-align: center;
 		}
 		h1 {
-			background-color: #5d91f7;
+			background-color: #3BD09F;
             color: white;
             padding-top: 75px;
             padding-bottom: 75px;
@@ -56,12 +56,11 @@
 			color: #ffffff;
 			line-height: 30px;
 			font-size: 20px;
+			color: #3bd09f;
 			transition-duration: 1s;
 			text-align: center;
             margin: auto;
-            background: linear-gradient(to bottom, #61bd4f 0, #5aac44 100%);
             font-family: 'Sintony', sans-serif;
-            box-shadow: 0 2px 0 #3f6f21;
 		}
 		.button:hover {
 			text-decoration: underline;
@@ -122,12 +121,12 @@
         }
 		name {
 			float: left;
-			margin-top: 20px;
+			margin-top: 25px;
 			margin-left: 50px;
-			font-size: 30px;
+			font-size: 20px;
 			color: #FFFFFF;
 			text-decoration: none;
-            font-family: 'Pacifico', cursive;
+            font-family: 'Sintony', sans-serif;
 		}
         name:hover {
             text-decoration: underline;
@@ -138,9 +137,7 @@
             padding-top: 5px;
             padding-bottom: 5px;
             border-radius: 5px;
-            background-color: #5aac44;
             text-decoration: none;
-            box-shadow: 0 2px 0 #3f6f21;
             font-family: 'Sintony', sans-serif;
         }
         #holder {
@@ -160,34 +157,16 @@
             margin: auto;
             font-size: 30px;
         }
-        @media only screen and (min-width: 1500px) {
-            #holder {
-                width: 50%;
-                max-width: 2000px;
-                margin: auto;
-                background-color: #ffffff;
-            }
-            body {
-                background-color: #333;
-                background-image: url("{{url_for('static', filename='lovely.png')}}");
-            }
-            footer {
-                background-color: transparent;
-            }
-            p {
-                margin: auto;
-            }
-        }
-	</style>
+</style>
 </head>
 	
 <body>
     <div id="holder">
 	<header>
-		<a href = "{{ url_for('success') }}"><name>News Finder</name></a>
-		<a href = "{{ url_for('logout') }}">
+		<a href = "{{ url_for('home') }}"><name>Home</name></a>
+		<a href = "{{ url_for('login') }}">
             <logout>
-                <div id="logintop">Log Out
+                <div id="logintop">Login
                 </div>
             </logout></a>
 	</header>
@@ -213,7 +192,7 @@
         <h4>Sifting Through The Data</h4>
         <br>
         <br>
-        <p>Sadly, we don't yet offer a way to filter through the sources we send back to you through the API.<br><br> If you only want 1 source returned, you will have to figure out how to do that yourself.</p><br><br><a href="{{ url_for('signup') }}"><div class="button">Convinced? Let's Begin!</div></a>
+        <p>Sadly, we don't yet offer a way to filter through the sources we send back to you through the API.<br><br> If you only want 1 source returned, you will have to figure out how to do that yourself.</p><br><br>
         <br>
         <br>
         <br>
