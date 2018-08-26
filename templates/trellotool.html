@@ -12,8 +12,6 @@
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Sintony:700" rel="stylesheet">
     <link rel="icon" href="{{url_for('static', filename='icon.png')}}">
 
     <!–– New Title -->
@@ -163,24 +161,6 @@
             display: block;
             margin: auto;
         }
-        @media only screen and (min-width: 1500px) {
-            #holder {
-                width: 50%;
-                max-width: 2000px;
-                margin: auto;
-            }
-            body {
-                background-color: #333;
-                background-image: url("{{url_for('static', filename='lovely.png')}}");
-            }
-            footer {
-                background-color: transparent;
-            }
-            .thingy {
-                background-color: #ffffff;
-                padding-bottom: 400px;
-            }
-        }
 	</style>
 </head>
 	
@@ -192,6 +172,10 @@
 		<a href = "{{ url_for('logout') }}"><logout>Log Out</logout></a>
 	</header>
 	<br>
+    <br>
+    <br>
+    <br>
+    <br>
     <br>
     <br>
     <img src="{{url_for('static', filename='trelloimg.png')}}">
