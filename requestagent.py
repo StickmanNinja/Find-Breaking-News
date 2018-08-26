@@ -218,7 +218,7 @@ def get_tasks():
         else:
             return render_template("errorpage.html", message="Sadly, that API key is not correct.")
     else:
-        return render_template("errorpage.html", message="You need to generate an API key")
+        return render_template("errorpage.html", message="To use the API, please set your API key in the reqeuest.")
 
 
 
