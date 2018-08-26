@@ -1,7 +1,6 @@
 # Importing MySQL module for Python
 import pymysql.cursors, os
 
-
 # (Using OS variables for security. These can be replaced with strings)
 
 

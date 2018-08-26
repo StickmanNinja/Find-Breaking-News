@@ -15,6 +15,14 @@
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sintony:700" rel="stylesheet">
     <link rel="icon" href="{{url_for('static', filename='icon.png')}}">
+    <!–– New Title -->
+	<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+	<!–– Title -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,900i" rel="stylesheet">
+	<!–– Button Text -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+	<!–– descripion -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
 	<style>
 		body, html {
 			width: 100%;
@@ -33,8 +41,12 @@
 			text-align: center;
 		}
 		h1 {
-			color: #5d91f7;
-            text-align: center;
+			font-family: 'Varela Round', sans-serif;
+			font-size: 45px;
+			text-align: center;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			width: 100%;
 		}
 		input {
 			margin: 20px;
@@ -45,23 +57,22 @@
 			color: #E9EEA;
 		}
 		.button {
-			width: 300px;
+			width: 150px;
 			border-radius: 15px;
-			padding-top: 15px;
-			padding-bottom: 15px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			background-color: #5d91f7;
+            background: #3bd09f;
 			color: #ffffff;
 			line-height: 30px;
 			font-size: 20px;
-			transition-duration: 1s;
 			text-align: center;
+            border: none;
+            display: block;
             margin: auto;
-            background: linear-gradient(to bottom, #61bd4f 0, #5aac44 100%);
-            font-family: 'Sintony', sans-serif;
-            box-shadow: 0 2px 0 #3f6f21;
 		}
 		.button:hover {
-			text-decoration: underline;
-			transition-duration: 1s;
+			background-color: #2a9974;
 			cursor: pointer;
 		}
 		.logo {
@@ -83,6 +94,7 @@
             font-size: 20px;
             width: 60%;
             margin: auto;
+            max-width: 600px;
         }
 		.title {
 			margin-top: 100px;
@@ -90,53 +102,51 @@
 		header {
 			height: 80px;
 			width: 100%;
-			background-color: #343a40;
+			background-color: #ffffff;
+			font-family: 'Varela Round', sans-serif;
 		}
-		logout,name {
-			float: right;
+		logout {
+            padding-right: 25px;
+            padding-left: 25px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border-radius: 10px;
+            background: #ffffff;
+            text-decoration: none;
+            border: 1px solid #3bd09f;
+            float: right;
 			margin-top: 25px;
 			margin-right: 50px;
-			font-size:20px; 
-			color: #FFFFFF;
+			font-size: 20px; 
+			color: #3bd09f;
 			cursor: pointer;
 		}
         
-        login{
-			float: right;
-			margin-top: 25px;
-			margin-right: 50px;
-			font-size:20px; 
-			color: #FFFFFF;
-			cursor: pointer;
-		}
-        login:hover{
-            text-decoration: underline;
-        }
         logout:hover {
-            text-decoration:underline;
+            background-color: #3bd09f;
+            color: #ffffff;
+            text-decoration: none;
         }
 		name {
+			border-radius: 10px;
+		    padding-right: 25px;
+            padding-left: 25px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+		    border: 1px solid #3bd09f;
 			float: left;
-			margin-top: 20px;
+			margin-top: 25px;
 			margin-left: 50px;
-			font-size: 30px;
-			color: #FFFFFF;
+			font-size: 20px;
+			color: #3bd09f;
 			text-decoration: none;
-            font-family: 'Pacifico', cursive;
+			background-color: #ffffff;
 		}
         name:hover {
-            text-decoration: underline;
-        }
-        #logintop {
-            padding-right: 15px;
-            padding-left: 15px;
-            padding-top: 5px;
-            padding-bottom: 5px;
-            border-radius: 5px;
-            background-color: #5aac44;
+        	background-color: #3bd09f;
+        	color: #ffffff;
             text-decoration: none;
-            box-shadow: 0 2px 0 #3f6f21;
-            font-family: 'Sintony', sans-serif;
+            cursor: pointer;
         }
         #holder {
             height: 98%;
@@ -151,31 +161,13 @@
             margin-bottom: 0px;
             padding: 15px;
         }
-        @media only screen and (min-width: 1500px) {
-            #holder {
-                width: 50%;
-                max-width: 2000px;
-                margin: auto;
-                background-color: #ffffff;
-            }
-            body {
-                background-color: #333;
-                background-image: url("{{url_for('static', filename='lovely.png')}}");
-            }
-            footer {
-                background-color: transparent;
-            }
-            p {
-                margin: auto;
-            }
-        }
 	</style>
 </head>
 	
 <body>
     <div id="holder">
 	<header>
-		<a href = "{{ url_for('success') }}"><name>News Finder</name></a>
+		<a href = "{{ url_for('success') }}"><name>Back</name></a>
 		<a href = "{{ url_for('logout') }}">
             <logout>
                 <div id="logintop">Log Out
@@ -192,13 +184,12 @@
         We purposely made it simple, so all you need is a few lines of code to get the data you want.
         <br>
         <br>
-         If you have an application that needs breaking news of the day, then simply send a request to us. <br><br> Our server will automatically send back relevent results... provided you have the right credentials which you can generate below.</p><br><br><a href="{{ url_for('generateapikey') }}"><div class="button">Generate API Key</div></a>
+         If you have an application that needs breaking news of the day, then simply send a request to us. <br><br> Our server will automatically send back relevent results... provided you have the right credentials which you can generate below.</p><br><br><a href="{{ url_for('generateapikey') }}"><div class="button">Get API Key</div></a>
         <br>
         <br>
         <br>
         <br>
     </div>
-    <footer>NewsFinder.io - Copyright 2018 - All Rights Reserved</footer>
 </body>
 
 </html>

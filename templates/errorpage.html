@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sintony:700" rel="stylesheet">
     <link rel="icon" href="{{url_for('static', filename='icon.png')}}">
-	<!–– New Title -->
+    <!–– New Title -->
 	<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
 	<!–– Title -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,900i" rel="stylesheet">
@@ -24,10 +24,8 @@
 	<!–– descripion -->
 	<link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
 	<style>
-	<style>
 	* {
 		text-align: center;
-		margin: auto;
 	}
 		body, html {
 			width: 100%;
@@ -43,6 +41,7 @@
 			background-color: #FFFFFF;
 			display: block;
 			border-radius: 15px;
+			text-align: center;
 		}
 		h1 {
 			font-family: 'Varela Round', sans-serif;
@@ -56,8 +55,6 @@
 			width: 350px;
 			height: 35px;
 			margin: auto;
-			text-align: center;
-			display: block;
 		}
 		input::placeholder {
 			color: #E9EEA;
@@ -154,9 +151,7 @@
             text-decoration: none;
             cursor: pointer;
         }
-        form {
-        	width: 100%;
-        }
+        
 	</style>
 </head>
 	
@@ -164,21 +159,20 @@
     <div id="holder">
     <div class = "thingy">
 	<header>
-		<a href = "{{ url_for('success') }}"><name>Panel</name></a>
+		<a href = "{{ url_for('success') }}"><name>Back</name></a>
 		<a href = "{{ url_for('logout') }}"><logout>Log Out</logout></a>
 	</header>
 	<br>
-	<br>
-	<br>
     <br>
-    <h1>Authorization</h1>
+ <div class = "row">
+	  <div class="col-xs-3"></div>
+     <div class="col-xs-6"><h1>Error</h1></div>
+    </div>
     <br>
-<form action="{{ url_for('addtrellotoken') }}" method="post">
-<h3 style = "text-align: center;">Give us access to your Trello by clicking <a href = "https://trello.com/1/authorize?expiration=never&scope=read,write,account&response_type=token&name=NewsFinder&key=79bad24bd4fed75755bf34a4a3b77232" target="_blank">here</a>.</h3>
-<br><br>
-<input type="text" name="trellotoken" placeholder="Place Code From Link Here" style = "margin: auto;">
-<br><br><button class="button" type="submit" >Submit</button>
-    </form>
+<div class = "row">
+	  <div class="col-xs-3"></div>
+     <div class="col-xs-6"><h3>{{message}}</h3><br><br><br><a id="buttonlink"><button class="button" onclick="javascript:window.history.back();">Return</button></a></div>
+    </div>
     </div>
   </div>  
 </body>

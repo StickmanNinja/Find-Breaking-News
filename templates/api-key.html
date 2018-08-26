@@ -15,6 +15,14 @@
 	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sintony:700" rel="stylesheet">
     <link rel="icon" href="{{url_for('static', filename='icon.png')}}">
+   <!–– New Title -->
+	<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+	<!–– Title -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,900i" rel="stylesheet">
+	<!–– Button Text -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+	<!–– descripion -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
 	<style>
 		body, html {
 			width: 100%;
@@ -33,7 +41,12 @@
 			text-align: center;
 		}
 		h1 {
-			color: #5d91f7;
+			font-family: 'Varela Round', sans-serif;
+			font-size: 45px;
+			text-align: center;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			width: 100%;
 		}
 		input {
 			margin: 20px;
@@ -75,9 +88,9 @@
 		}
         
         h4 {
-            font-size: 13px;
+            font-size: 20px;
             display: block;
-            border: 1px solid #5d91f7;
+            color: #3bd09f;
             text-align: center;
             min-width: 350px;
             padding: 5px;
@@ -92,84 +105,57 @@
 		header {
 			height: 80px;
 			width: 100%;
-			background-color: #343a40;
+			background-color: #ffffff;
+			font-family: 'Varela Round', sans-serif;
 		}
-		logout,name {
-			float: right;
+		logout {
+            padding-right: 25px;
+            padding-left: 25px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border-radius: 10px;
+            background: #ffffff;
+            text-decoration: none;
+            border: 1px solid #3bd09f;
+            float: right;
 			margin-top: 25px;
 			margin-right: 50px;
-			font-size:20px; 
-			color: #FFFFFF;
+			font-size: 20px; 
+			color: #3bd09f;
 			cursor: pointer;
 		}
         
-        login{
-			float: right;
-			margin-top: 25px;
-			margin-right: 50px;
-			font-size:20px; 
-			color: #FFFFFF;
-			cursor: pointer;
-		}
-        login:hover{
-            text-decoration: underline;
-        }
         logout:hover {
-            text-decoration:underline;
+            background-color: #3bd09f;
+            color: #ffffff;
+            text-decoration: none;
         }
 		name {
+			border-radius: 10px;
+		    padding-right: 25px;
+            padding-left: 25px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+		    border: 1px solid #3bd09f;
 			float: left;
-			margin-top: 20px;
+			margin-top: 25px;
 			margin-left: 50px;
-			font-size: 30px;
-			color: #FFFFFF;
+			font-size: 20px;
+			color: #3bd09f;
 			text-decoration: none;
-            font-family: 'Pacifico', cursive;
+			background-color: #ffffff;
 		}
         name:hover {
-            text-decoration: underline;
-        }
-        #logintop {
-            padding-right: 15px;
-            padding-left: 15px;
-            padding-top: 5px;
-            padding-bottom: 5px;
-            border-radius: 5px;
-            background-color: #5aac44;
+        	background-color: #3bd09f;
+        	color: #ffffff;
             text-decoration: none;
-            box-shadow: 0 2px 0 #3f6f21;
-            font-family: 'Sintony', sans-serif;
+            cursor: pointer;
         }
         #holder {
             height: 98%;
         }
-        footer {
-            background-color: #333;
-            color: #ffffff;
-            padding-bottom: 0px;
-            margin-bottom: 0px;
-            font-size: 10px;
-            text-align: center;
-            margin-bottom: 0px;
-            padding: 15px;
-        }
-        @media only screen and (min-width: 1500px) {
-            #holder {
-                width: 50%;
-                max-width: 2000px;
-                margin: auto;
-                background-color: #ffffff;
-            }
-            body {
-                background-color: #333;
-                background-image: url("{{url_for('static', filename='lovely.png')}}");
-            }
-            footer {
-                background-color: transparent;
-            }
-            p {
-                margin: auto;
-            }
+        p {
+        	text-align: center;
         }
 	</style>
 </head>
@@ -177,7 +163,7 @@
 <body>
 	<div id="holder">
 	<header>
-		<a href = "{{ url_for('success') }}"><name>News Finder</name></a>
+		<a href = "{{ url_for('success') }}"><name>Back</name></a>
 		<a href = "{{ url_for('logout') }}">
             <logout>
                 <div id="logintop">Log Out
@@ -186,27 +172,22 @@
 	</header>
 	<br>
     <br>
+    <br>
+    <br>
  <div class = "row">
 	  <div class="col-sm-3"></div>
-     <div class="col-sm-6"><h1>Developer Keys</h1></div>
+     <div class="col-sm-6"><h1>Your Developer Key:</h1></div>
     </div>
     <br>
-<div class = "row">
-	  <div class="col-sm-3"></div>
-     <div class="col-sm-6"><h3>Key:</h3></div>
-    </div>
 </body>
     
 <div class = "row">
 	  <div class="col-sm-3"></div>
-     <div class="col-sm-6"><h4>{{key}}</h4></div>
+     <h4>{{key}}</h4>
     </div>
     <br>
     <br>
-<div class = "row">
-	  <div class="col-sm-3"></div>
-     <div class="col-sm-6"><p>You can use your API key by connecting with to the API endpoint <a href="linktoapi">here</a></p></div>
-    </div>
+	  <p>You can use your API key by connecting with to the API endpoint <a href="linktoapi">here</a></p>
     </div>
 </body>
 

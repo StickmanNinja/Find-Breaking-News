@@ -15,6 +15,15 @@
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sintony:700" rel="stylesheet">
     <link rel="icon" href="{{url_for('static', filename='icon.png')}}">
+
+    <!–– New Title -->
+	<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+	<!–– Title -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,900i" rel="stylesheet">
+	<!–– Button Text -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+	<!–– descripion -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
 	<style>
 		body, html {
 			width: 100%;
@@ -44,22 +53,24 @@
 			color: #E9EEA;
 		}
 		.button {
-			width: 200px;
-			padding-top: 10px;
-			padding-bottom: 10px;
-            background-color: #3bd09f;
-			border: 1px solid #3bd09f;
+			width: 150px;
+			border-radius: 15px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			background-color: #5d91f7;
+            background: #3bd09f;
 			color: #ffffff;
 			line-height: 30px;
 			font-size: 20px;
-			transition-duration: 1s;
 			text-align: center;
             border: none;
+            display: block;
+            margin: auto;
+            font-family: 'Varela Round', sans-serif;
 		}
 		.button:hover {
-			text-decoration: underline;
-			transition-duration: 1s;
 			cursor: pointer;
+			background-color: #2a9974;
 		}
 		.logo {
 			margin: auto;
@@ -88,47 +99,55 @@
 		header {
 			height: 80px;
 			width: 100%;
-			background-color: #3bd09f;
+			background-color: #ffffff;
+		}
+		header {
+			height: 80px;
+			width: 100%;
+			background-color: #ffffff;
+			font-family: 'Varela Round', sans-serif;
 		}
 		logout {
-            padding-right: 15px;
-            padding-left: 15px;
-            padding-top: 5px;
-            padding-bottom: 5px;
-            border-radius: 0px;
+            padding-right: 25px;
+            padding-left: 25px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border-radius: 10px;
+            background: #ffffff;
             text-decoration: none;
-            border: 1px solid #ffffff;
-            font-family: 'Sintony', sans-serif;
+            border: 1px solid #3bd09f;
             float: right;
 			margin-top: 25px;
 			margin-right: 50px;
-			font-size:20px; 
-			color: #FFFFFF;
+			font-size: 20px; 
+			color: #3bd09f;
 			cursor: pointer;
 		}
         
         logout:hover {
-            background-color:#ffffff;
-            color: #3bd09f;
-            cursor: pointer;
+            background-color: #3bd09f;
+            color: #ffffff;
+            text-decoration: none;
         }
 		name {
-		padding-right: 15px;
-            padding-left: 15px;
-            padding-top: 5px;
-            padding-bottom: 5px;
+			border-radius: 10px;
+		    padding-right: 25px;
+            padding-left: 25px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+		    border: 1px solid #3bd09f;
 			float: left;
-			margin-top: 20px;
+			margin-top: 25px;
 			margin-left: 50px;
 			font-size: 20px;
-			color: #FFFFFF;
+			color: #3bd09f;
 			text-decoration: none;
-            font-family: Arial;
-            border: 1px solid #ffffff;
+			background-color: #ffffff;
 		}
         name:hover {
-            background-color:#ffffff;
-            color: #3bd09f;
+        	background-color: #3bd09f;
+        	color: #ffffff;
+            text-decoration: none;
             cursor: pointer;
         }
         img {
@@ -174,10 +193,7 @@
 	</header>
 	<br>
     <br>
-        <br>
-        <br>
     <br>
-
     <img src="{{url_for('static', filename='trelloimg.png')}}">
     <br>
     <h3>Please paste the URL to the Trello board you want us to fill.</h3>

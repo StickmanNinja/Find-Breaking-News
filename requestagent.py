@@ -36,7 +36,7 @@ def login():
             session["user"] = given_username
             return redirect(url_for('success'))
         else:
-            return "Login Error"
+            return render_template("errorpage.html", message="Uh oh. You didn't log in correctly!")
     else:
         return render_template("login.html")
 
@@ -117,7 +117,7 @@ def addtrellotoken():
             addToken(session["user"], token)
             return render_template("trellotool.html")
         else:
-            return "Uh oh. That's not a valid token!"
+            return render_template("errorpage.html", message="Uh oh. That's not a valid token!")
     else:
         return render_template("trellonotoken.html")
 
@@ -216,9 +216,9 @@ def get_tasks():
             stories = getStories()
             return json.dumps(stories)
         else:
-            return "Bad API key."
+            return render_template("errorpage.html", message="Sadly, that API key is not correct.")
     else:
-        return "You need to generate an API key"
+        return render_template("errorpage.html", message="You need to generate an API key")
 
 
 
@@ -241,7 +241,7 @@ def getstories():
 #---------------------------------------------------
 @app.route("/email")
 def email():
-    return "Email Example."
+    return render_template("errorpage.html", message="Email services coming soon!")
 
 
 
